@@ -1,26 +1,48 @@
-﻿using System;
-using System.Net.Http.Headers;
+﻿/* 
+This C# console application is designed to:
+- Use arrays to store student names and assignment scores.
+- Use a `foreach` statement to iterate through the student names as an outer program loop.
+- Use an `if` statement within the outer loop to identify the current student name and access that student's assignment scores.
+- Use a `foreach` statement within the outer loop to iterate though the assignment scores array and sum the values.
+- Use an algorithm within the outer loop to calculate the average exam score for each student.
+- Use an `if-elseif-else` construct within the outer loop to evaluate the average exam score and assign a letter grade automatically.
+- Integrate extra credit scores when calculating the student's final score and letter grade as follows:
+    - detects extra credit assignments based on the number of elements in the student's scores array.
+    - divides the values of extra credit assignments by 10 before adding extra credit scores to the sum of exam scores.
+- use the following report format to report student grades: 
 
-// initialize variables - graded assignments 
+    Student         Grade
+
+    Sophia:         92.2    A-
+    Andrew:         89.6    B+
+    Emma:           85.6    B
+    Logan:          91.2    A-
+*/
 int examAssignments = 5;
+
+string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan" };
 
 int[] sophiaScores = new int[] { 90, 86, 87, 98, 100, 94, 90 };
 int[] andrewScores = new int[] { 92, 89, 81, 96, 90, 89 };
 int[] emmaScores = new int[] { 90, 85, 87, 98, 68, 89, 89, 89 };
 int[] loganScores = new int[] { 90, 95, 87, 88, 96, 96 };
-int[] beckyScores = new int[] { 92, 91, 90, 91, 92, 92, 92 };
-int[] chrisScores = new int[] { 84, 86, 88, 90, 92, 94, 96, 98 };
-int[] ericScores = new int[] { 80, 90, 100, 80, 90, 100, 80, 90 };
-int[] gregorScores = new int[] { 91, 91, 91, 91, 91, 91, 91 };
-
-// Student names
-string[] studentNames = new string[] { "Sophia", "Andrew", "Emma", "Logan", "Becky", "Chris", "Eric", "Gregor" };
 
 int[] studentScores = new int[10];
+
 string currentStudentLetterGrade = "";
 
-Console.WriteLine("Student\t\tGrade\n");
+// display the header row for scores/grades
+Console.Clear();
+Console.WriteLine("Student\t\tExam Score\tOverall Grade\tExtra Credit\n");
 
+/*
+The outer foreach loop is used to:
+- iterate through student names 
+- assign a student's grades to the studentScores array
+- sum assignment scores (inner foreach loop)
+- calculate numeric and letter grade
+- write the score report information
+*/
 foreach (string name in studentNames)
 {
     string currentStudent = name;
@@ -33,18 +55,9 @@ foreach (string name in studentNames)
 
     else if (currentStudent == "Emma")
         studentScores = emmaScores;
+
     else if (currentStudent == "Logan")
         studentScores = loganScores;
-    else if (currentStudent == "Becky")
-        studentScores = beckyScores;
-    else if (currentStudent == "Chris")
-        studentScores = chrisScores;
-    else if (currentStudent == "Eric")
-        studentScores = ericScores;
-    else if (currentStudent == "Gregor")
-        studentScores = gregorScores;
-    else
-        continue;
 
     int sumAssignmentScores = 0;
 
@@ -52,47 +65,88 @@ foreach (string name in studentNames)
 
     int gradedAssignments = 0;
 
+    int examScoreSum = 0;
+    decimal examScore;
 
+    int extraScoreSum = 0;
+    decimal extraScore;
+
+    decimal extraScoreSumTen = 0;
+
+    /* 
+    the inner foreach loop sums assignment scores
+    extra credit assignments are worth 10% of an exam score
+    */
     foreach (int score in studentScores)
     {
-        gradedAssignments++;
-        // add the exam score to the sum
-        if (gradedAssignments <= examAssignments) sumAssignmentScores += score;
-        else sumAssignmentScores += score / 10;
+        gradedAssignments += 1;
 
+        if (gradedAssignments <= examAssignments)
+        {
+            sumAssignmentScores += score;
+            examScoreSum += score;
+        }
+        else
+        {
+            sumAssignmentScores += score / 10;
+            extraScoreSum += score;
+        }
     }
+
+    extraScoreSumTen = (decimal)extraScoreSum / 10;
+    decimal pts = extraScoreSumTen / examAssignments;
+
+    examScore = (decimal)examScoreSum / examAssignments;
+
+    extraScore = extraScoreSum / (studentScores.Length - examAssignments);
 
     currentStudentGrade = (decimal)(sumAssignmentScores) / examAssignments;
 
     if (currentStudentGrade >= 97)
         currentStudentLetterGrade = "A+";
+
     else if (currentStudentGrade >= 93)
         currentStudentLetterGrade = "A";
+
     else if (currentStudentGrade >= 90)
         currentStudentLetterGrade = "A-";
+
     else if (currentStudentGrade >= 87)
         currentStudentLetterGrade = "B+";
+
     else if (currentStudentGrade >= 83)
         currentStudentLetterGrade = "B";
+
     else if (currentStudentGrade >= 80)
         currentStudentLetterGrade = "B-";
+
     else if (currentStudentGrade >= 77)
         currentStudentLetterGrade = "C+";
+
     else if (currentStudentGrade >= 73)
         currentStudentLetterGrade = "C";
+
     else if (currentStudentGrade >= 70)
         currentStudentLetterGrade = "C-";
+
     else if (currentStudentGrade >= 67)
         currentStudentLetterGrade = "D+";
+
     else if (currentStudentGrade >= 63)
         currentStudentLetterGrade = "D";
+
     else if (currentStudentGrade >= 60)
         currentStudentLetterGrade = "D-";
+
     else
         currentStudentLetterGrade = "F";
 
-    Console.WriteLine($"{currentStudent}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}");
+    // Student         Grade
+    // Sophia:         92.2    A-
+
+    Console.WriteLine($"{currentStudent}\t\t{examScore}\t\t{currentStudentGrade}\t{currentStudentLetterGrade}\t{extraScore} ({pts} pts)");
 }
 
-Console.WriteLine("Press the Enter key to continue");
+// required for running in VS Code (keeps the Output windows open to view results)
+Console.WriteLine("\n\rPress the Enter key to continue");
 Console.ReadLine();
