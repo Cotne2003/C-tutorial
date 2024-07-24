@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cotne\\Desktop\\C#\\CsharpProjects\\TestProject\\TestProject.csproj": {}
+    "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TestProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cotne\\Desktop\\C#\\CsharpProjects\\TestProject\\TestProject.csproj": {
+    "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TestProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cotne\\Desktop\\C#\\CsharpProjects\\TestProject\\TestProject.csproj",
+        "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TestProject.csproj",
         "projectName": "TestProject",
-        "projectPath": "C:\\Users\\Cotne\\Desktop\\C#\\CsharpProjects\\TestProject\\TestProject.csproj",
-        "packagesPath": "C:\\Users\\Cotne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cotne\\Desktop\\C#\\CsharpProjects\\TestProject\\obj\\",
+        "projectPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TestProject.csproj",
+        "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Cotne\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"

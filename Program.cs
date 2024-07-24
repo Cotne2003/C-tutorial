@@ -16,6 +16,8 @@ string[,] ourAnimals = new string[maxPets, 6];
 
 // TODO: Convert the if-elseif-else construct to a switch statement
 
+// test
+
 // create some initial ourAnimals array entries
 for (int i = 0; i < maxPets; i++)
 {
