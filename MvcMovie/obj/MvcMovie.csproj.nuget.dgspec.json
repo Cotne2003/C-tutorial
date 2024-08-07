@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\MvcMovie\\MvcMovie.csproj": {}
+    "C:\\Users\\Tsotne\\Desktop\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\MvcMovie\\MvcMovie.csproj": {
+    "C:\\Users\\Tsotne\\Desktop\\MvcMovie\\MvcMovie\\MvcMovie.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\MvcMovie\\MvcMovie.csproj",
+        "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
         "projectName": "MvcMovie",
-        "projectPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\MvcMovie\\MvcMovie.csproj",
+        "projectPath": "C:\\Users\\Tsotne\\Desktop\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
         "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\MvcMovie\\obj\\",
+        "outputPath": "C:\\Users\\Tsotne\\Desktop\\MvcMovie\\MvcMovie\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,22 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.7, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
