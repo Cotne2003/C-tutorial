@@ -14,6 +14,10 @@ namespace MvcMovie
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+
+            builder.Services.AddDbContext<MvcMovieContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("MvcMovieContext")));
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
