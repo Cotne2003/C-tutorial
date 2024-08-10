@@ -23,7 +23,7 @@ namespace MvcMovie.Controllers
 		[HttpPost]
 		public async Task<IActionResult> Add(AddMovieViewModel viewModel)
 		{
-			var movie = new Movie {
+			v ar movie = new Movie {
 				Title = viewModel.Title,
 				Genre = viewModel.Genre,
 				Price = viewModel.Price,
@@ -38,9 +38,9 @@ namespace MvcMovie.Controllers
 		[HttpGet]
 		public async Task<IActionResult> List()
 		{
-			var students = await dbContext.Movie.ToListAsync();
+			var movies = await dbContext.Movie.ToListAsync();
 
-			return View();
+			return View(movies);
 		}
 	}
 }
