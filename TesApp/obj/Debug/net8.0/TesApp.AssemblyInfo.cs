@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TesApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ad825c3ea220d6829b682aefce6c874e837c336")]
 [assembly: System.Reflection.AssemblyProductAttribute("TesApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TesApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\TesApp\\TesApp\\TesApp.csproj",
+      "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\TesApp.csproj",
       "projectName": "TesApp",
-      "projectPath": "C:\\Users\\Tsotne\\Desktop\\TesApp\\TesApp\\TesApp.csproj",
+      "projectPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\TesApp.csproj",
       "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tsotne\\Desktop\\TesApp\\TesApp\\obj\\",
+      "outputPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",

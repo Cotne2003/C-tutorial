@@ -8,30 +8,19 @@ namespace TesApp
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+
+            builder.Services.AddControllersWithViews();
+
             var app = builder.Build();
 
-            app.MapGet("/", (HttpContext context) =>
-            {
-                string html = @"
-                                <html>
-                                    <body>
-                                        <h1>HelloWorld</h1>
-                                        <br/>
-                                        Welcome to this world!
-                                    </body>
-                                 </html>
-                              ";
-                WriteHtml(context, html);
-            });
+            app.UseRouting();
+
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=index}/{id?}"
+            );
 
             app.Run();
-
-            void WriteHtml(HttpContext context, string html)
-            {
-                context.Response.ContentType = MediaTypeNames.Text.Html;
-                context.Response.ContentLength = Encoding.UTF8.GetByteCount(html);
-                context.Response.WriteAsync(html);
-            }
         }
     }
 }
