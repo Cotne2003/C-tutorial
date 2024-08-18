@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|c:\\users\\tsotne\\desktop\\c-tutorial\\tesapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|solutionrelative:tesapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|c:\\users\\tsotne\\desktop\\c-tutorial\\tesapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|solutionrelative:tesapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|c:\\users\\tsotne\\desktop\\c-tutorial\\tesapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|solutionrelative:tesapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|c:\\users\\tsotne\\desktop\\c-tutorial\\tesapp\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|solutionrelative:tesapp\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|c:\\users\\tsotne\\desktop\\c-tutorial\\tesapp\\views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{BDA2AFCB-8E0B-4064-B9DE-6ADCA2D10D5A}|TesApp\\TesApp.csproj|solutionrelative:tesapp\\views\\categories\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -18,30 +34,82 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "TesApp\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "TesApp\\Views\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T13:52:04.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TesApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TesApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T13:46:01.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Categories\\Index.cshtml",
+              "RelativeDocumentMoniker": "TesApp\\Views\\Categories\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Categories\\Index.cshtml",
+              "RelativeToolTip": "TesApp\\Views\\Categories\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T13:38:21.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TesApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TesApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-18T13:40:37.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "CategoriesController.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Controllers\\CategoriesController.cs",
               "RelativeDocumentMoniker": "TesApp\\Controllers\\CategoriesController.cs",
               "ToolTip": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Controllers\\CategoriesController.cs",
               "RelativeToolTip": "TesApp\\Controllers\\CategoriesController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAgAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-17T00:05:00.216Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Categories\\Edit.cshtml",
               "RelativeDocumentMoniker": "TesApp\\Views\\Categories\\Edit.cshtml",
               "ToolTip": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\TesApp\\Views\\Categories\\Edit.cshtml",
               "RelativeToolTip": "TesApp\\Views\\Categories\\Edit.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-08-17T00:04:31.578Z",
               "EditorCaption": ""
