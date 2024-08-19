@@ -51,3 +51,4 @@ C:\Users\Tsotne\Desktop\C-tutorial\TesApp\obj\Debug\net8.0\TesApp.genruntimeconf
 C:\Users\Tsotne\Desktop\C-tutorial\TesApp\obj\Debug\net8.0\ref\TesApp.dll
 C:\Users\Tsotne\Desktop\C-tutorial\TesApp\obj\Debug\net8.0\TesApp.RazorAssemblyInfo.cache
 C:\Users\Tsotne\Desktop\C-tutorial\TesApp\obj\Debug\net8.0\TesApp.RazorAssemblyInfo.cs
+C:\Users\Tsotne\Desktop\C-tutorial\TesApp\bin\Debug\net8.0\TesApp.staticwebassets.runtime.json

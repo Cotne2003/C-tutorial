@@ -4,10 +4,32 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Supermarket Management</title>
+        <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.css" />
     </head>
     <body>
-        <div>
-            @RenderBody()
+        <header>
+            <nav class="navbar navbar-expand-sm">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/home/index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="/categories/index">Categories</a>
+                    </li>
+                <li class="nav-item">
+
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="container">
+            <div class="pb-3">
+                @RenderSection("Title")
+                <hr />
+            </div>
+            <div>
+                @RenderBody()
+            </div>
         </div>
     </body>
     </html>
