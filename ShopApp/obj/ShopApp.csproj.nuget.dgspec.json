@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\ShopApp\\ShopApp.csproj": {}
+    "C:\\Users\\Tsotne\\Desktop\\ShopApp\\ShopApp\\ShopApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\ShopApp\\ShopApp.csproj": {
+    "C:\\Users\\Tsotne\\Desktop\\ShopApp\\ShopApp\\ShopApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\ShopApp\\ShopApp.csproj",
+        "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\ShopApp\\ShopApp\\ShopApp.csproj",
         "projectName": "ShopApp",
-        "projectPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\ShopApp\\ShopApp.csproj",
+        "projectPath": "C:\\Users\\Tsotne\\Desktop\\ShopApp\\ShopApp\\ShopApp.csproj",
         "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\ShopApp\\obj\\",
+        "outputPath": "C:\\Users\\Tsotne\\Desktop\\ShopApp\\ShopApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",
