@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ShopApp.Models;
 using ShopApp.Services;
 
 namespace ShopApp.Controllers
@@ -16,5 +17,22 @@ namespace ShopApp.Controllers
 			var products = context.Products.OrderByDescending(p => p.Id).ToList();
 			return View(products);
 		}
-	}
+        public IActionResult Create()
+		{
+			return View();
+		}
+		[HttpPost]
+		public IActionResult Create(ProductDto productDto)
+		{
+
+			if (!ModelState.IsValid)
+			{
+				return View(productDto);
+			}
+
+			return RedirectToAction("Index", "Products");
+		}
+
+
+    }
 }
