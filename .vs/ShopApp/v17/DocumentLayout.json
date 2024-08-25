@@ -34,8 +34,7 @@
               "RelativeToolTip": "ShopApp\\Views\\Products\\Index.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-24T02:02:17.836Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T02:02:17.836Z"
             },
             {
               "$type": "Document",
@@ -47,8 +46,7 @@
               "RelativeToolTip": "ShopApp\\Views\\Products\\Create.cshtml",
               "ViewState": "AQIAAAYAAAAAAAAAAAAIwEgAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-24T01:54:51.927Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-24T01:54:51.927Z"
             },
             {
               "$type": "Document",
@@ -58,7 +56,7 @@
               "RelativeDocumentMoniker": "ShopApp\\Controllers\\ProductsController.cs",
               "ToolTip": "C:\\Users\\Tsotne\\Desktop\\C-tutorial\\ShopApp\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "ShopApp\\Controllers\\ProductsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAA0AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-24T01:54:20.179Z",
               "EditorCaption": ""

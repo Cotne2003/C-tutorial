@@ -17,21 +17,21 @@ namespace ShopApp.Controllers
 			var products = context.Products.OrderByDescending(p => p.Id).ToList();
 			return View(products);
 		}
-        public IActionResult Create()
-		{
-			return View();
-		}
-		[HttpPost]
-		public IActionResult Create(ProductDto productDto)
-		{
-
-			if (!ModelState.IsValid)
-			{
-				return View(productDto);
-			}
-
-			return RedirectToAction("Index", "Products");
-		}
+        // public IActionResult Create()
+		// {
+		// 	return View();
+		// }
+		// [HttpPost]
+		// public IActionResult Create(ProductDto productDto)
+		// {
+		// 
+		// 	if (!ModelState.IsValid)
+		// 	{
+		// 		return View(productDto);
+		// 	}
+		// 
+		// 	return RedirectToAction("Index", "Products");
+		// }
 
 
     }
