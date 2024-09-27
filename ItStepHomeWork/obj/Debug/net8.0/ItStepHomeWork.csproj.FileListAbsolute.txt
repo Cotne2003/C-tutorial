@@ -1,0 +1,14 @@
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\bin\Debug\net8.0\ItStepHomeWork.exe
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\bin\Debug\net8.0\ItStepHomeWork.deps.json
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\bin\Debug\net8.0\ItStepHomeWork.runtimeconfig.json
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\bin\Debug\net8.0\ItStepHomeWork.dll
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\bin\Debug\net8.0\ItStepHomeWork.pdb
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ItStepHomeWork.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ItStepHomeWork.AssemblyInfoInputs.cache
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ItStepHomeWork.AssemblyInfo.cs
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ItStepHomeWork.csproj.CoreCompileInputs.cache
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ItStepHomeWork.dll
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\refint\ItStepHomeWork.dll
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ItStepHomeWork.pdb
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ItStepHomeWork.genruntimeconfig.cache
+C:\Users\Tsotne\Desktop\ItStepHomeWork\ItStepHomeWork\obj\Debug\net8.0\ref\ItStepHomeWork.dll
