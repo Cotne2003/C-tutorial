@@ -1,29 +1,47 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿
+Square squ = new Square(8);
+Console.WriteLine(squ.P());
+Console.WriteLine(squ.A());
 
-Calculator calc = new Calculator();
+Circle circle = new Circle(5);
+Console.WriteLine(circle.P());
+Console.WriteLine(circle.A());
 
-Console.WriteLine(calc.Plus(10, 5.25));
-
-public class Calculator
+public class Square
 {
-    public double Plus(double a, double b)
+    public Square(double side)
     {
-        return a + b;
+        Side = side;
     }
-    public double Minus(double a, double b)
+
+    public double Side {  get; set; }
+
+    public double P()
     {
-        return a - b;
+        return Side * 4;
     }
-    public double Multiplication(double a, double b)
+
+    public double A()
     {
-        return a * b;
+        return Side * Side;
     }
-    public double Divide(double a, double b)
+}
+
+public class Circle
+{
+    public Circle(double radius)
     {
-        if (a == 0 || b == 0)
-        {
-            Console.WriteLine("Do not use 0");
-        }
-        return a / b;
+        Radius = radius;
+    }
+    public double Radius { get; set; }
+
+    public double P()
+    {
+        return Math.PI * 2 * Radius;
+    }
+
+    public double A()
+    {
+        return Math.PI * Math.Pow(Radius, 2);
     }
 }

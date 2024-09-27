@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsotne\\Desktop\\ItStepHomeWork\\ItStepHomeWork\\ItStepHomeWork.csproj",
+      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\ItStepHomeWork.csproj",
       "projectName": "ItStepHomeWork",
-      "projectPath": "C:\\Users\\Tsotne\\Desktop\\ItStepHomeWork\\ItStepHomeWork\\ItStepHomeWork.csproj",
+      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\ItStepHomeWork.csproj",
       "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tsotne\\Desktop\\ItStepHomeWork\\ItStepHomeWork\\obj\\",
+      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",
