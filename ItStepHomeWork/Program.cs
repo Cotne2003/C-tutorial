@@ -1,8 +1,48 @@
-﻿Console.WriteLine(AbbrevName("tsotne basiashvili"));
+﻿string? userInput = Console.ReadLine();
 
-string AbbrevName(string name)
+bool isNum = byte.TryParse(userInput, out byte userNum);
+
+if (isNum)
 {
-	string[] newArr = name.ToUpper().Split(" ");
-	string newStr = $"{newArr[0][0]}.{newArr[1][0]}";
-	return newStr;
+	if (Enum.IsDefined(typeof(Months), userNum))
+	{
+		Console.WriteLine(Enum.GetName(typeof(Months), userNum));
+	}
+	else
+	{
+		Console.WriteLine("Not in the list");
+	}
+}
+else
+{
+	if (Enum.IsDefined(typeof(Months), userInput))
+	{
+        foreach (Months item in Enum.GetValues(typeof(Months)))
+        {
+			if (userInput == item.ToString())
+			{
+				Console.WriteLine((int)item);
+			}
+        }
+	}
+	else
+	{
+		Console.WriteLine("Not in the list");
+	}
+}
+
+enum Months : byte
+{
+	Jan = 1,
+	Feb,
+	Mar,
+	Apr,
+	May,
+	Jun,
+	Jul,
+	Aug,
+	Sep,
+	Oct,
+	Nov,
+	Dec
 }
