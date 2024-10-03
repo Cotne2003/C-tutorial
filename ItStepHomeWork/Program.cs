@@ -1,35 +1,48 @@
-﻿Point test1 = new Point(3, 3, 3);
-Point test2 = new Point(3, 3, 3);
-Point test3 = test1 / test2;
-
-Console.WriteLine(test3.X);
-Console.WriteLine(test3.Y);
-Console.WriteLine(test3.Z);
-struct Point
+﻿internal class Program
 {
-    public Point(double x, double y, double z)
-    {
-        X = x;
-        Y = y;
-        Z = z;
-    }
-    public double X { get; set; }
-	public double Y { get; set; }
-	public double Z { get; set; }
-    public static Point operator +(Point p1, Point p2)
-    {
-        return new Point(p1.X + p2.X, p1.Y + p2.Y, p1.Z + p2.Z);
-    }
-    public static Point operator -(Point p1, Point p2)
-    {
-        return new Point(p1.X - p2.X, p1.Y - p2.Y, p1.Z - p2.Z);
-    }
-    public static Point operator *(Point p1, Point p2)
-    {
-        return new Point(p1.X * p2.X, p1.Y * p2.Y, p1.Z * p2.Z);
-    }
-    public static Point operator /(Point p1, Point p2)
-    {
-        return new Point(p1.X / p2.X, p1.Y / p2.Y, p1.Z / p2.Z);
-    }
+	static void Main(string[] args)
+	{
+		//		Console.WriteLine(Mathematical(1, 2));
+		//		Console.WriteLine(Mathematical(3, 2));
+		//		Console.WriteLine(Mathematical(2, 2));
+		//		int Mathematical(int a, int b)
+		//		{
+		//			if (a == b)
+		//				return (a + b) * 3;
+		//			return a + b;
+		//		}
+		//		Console.WriteLine(Algo(53));
+		//		Console.WriteLine(Algo(30));
+		//		Console.WriteLine(Algo(51));
+		//		int Algo(int n)
+		//		{
+		//			return n > 51 ? (n - 51) * 3 : 51 - n;
+		//		}
+
+		//		Console.WriteLine(Algo(30, 0));
+		//		Console.WriteLine(Algo(25, 5));
+		//		Console.WriteLine(Algo(20, 30));
+		//		Console.WriteLine(Algo(20, 25));
+		//
+		//		bool Algo(int a, int b)
+		//		{
+		//			if (a == 30 || b == 30)
+		//			{
+		//				return true;
+		//			}
+		//			else if (a + b == 30)
+		//			{
+		//				return true;
+		//			}
+		//			return false;
+		//		}
+		//		Console.WriteLine(Algo("if else"));
+		//		Console.WriteLine(Algo("else"));
+		//		Console.WriteLine(Algo("hahhaa"));
+		//		string Algo(string s)
+		//		{
+		//			return s.StartsWith("if else") || s.StartsWith("else") ? "if else" : "No";
+		//		}
+	}
 }
+
