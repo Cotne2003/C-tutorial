@@ -1,48 +1,35 @@
-﻿string? userInput = Console.ReadLine();
+﻿Point test1 = new Point(3, 3, 3);
+Point test2 = new Point(3, 3, 3);
+Point test3 = test1 / test2;
 
-bool isNum = byte.TryParse(userInput, out byte userNum);
-
-if (isNum)
+Console.WriteLine(test3.X);
+Console.WriteLine(test3.Y);
+Console.WriteLine(test3.Z);
+struct Point
 {
-	if (Enum.IsDefined(typeof(Months), userNum))
-	{
-		Console.WriteLine(Enum.GetName(typeof(Months), userNum));
-	}
-	else
-	{
-		Console.WriteLine("Not in the list");
-	}
-}
-else
-{
-	if (Enum.IsDefined(typeof(Months), userInput))
-	{
-        foreach (Months item in Enum.GetValues(typeof(Months)))
-        {
-			if (userInput == item.ToString())
-			{
-				Console.WriteLine((int)item);
-			}
-        }
-	}
-	else
-	{
-		Console.WriteLine("Not in the list");
-	}
-}
-
-enum Months : byte
-{
-	Jan = 1,
-	Feb,
-	Mar,
-	Apr,
-	May,
-	Jun,
-	Jul,
-	Aug,
-	Sep,
-	Oct,
-	Nov,
-	Dec
+    public Point(double x, double y, double z)
+    {
+        X = x;
+        Y = y;
+        Z = z;
+    }
+    public double X { get; set; }
+	public double Y { get; set; }
+	public double Z { get; set; }
+    public static Point operator +(Point p1, Point p2)
+    {
+        return new Point(p1.X + p2.X, p1.Y + p2.Y, p1.Z + p2.Z);
+    }
+    public static Point operator -(Point p1, Point p2)
+    {
+        return new Point(p1.X - p2.X, p1.Y - p2.Y, p1.Z - p2.Z);
+    }
+    public static Point operator *(Point p1, Point p2)
+    {
+        return new Point(p1.X * p2.X, p1.Y * p2.Y, p1.Z * p2.Z);
+    }
+    public static Point operator /(Point p1, Point p2)
+    {
+        return new Point(p1.X / p2.X, p1.Y / p2.Y, p1.Z / p2.Z);
+    }
 }
