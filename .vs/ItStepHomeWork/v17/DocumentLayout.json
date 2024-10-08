@@ -3,22 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\itstephomework\\services\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|solutionrelative:itstephomework\\services\\ishape.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\itstephomework\\classes\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|solutionrelative:itstephomework\\classes\\circle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\itstephomework\\classes\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|solutionrelative:itstephomework\\classes\\square.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\itstephomework\\classes\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|solutionrelative:itstephomework\\classes\\triangle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\itstephomework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|solutionrelative:itstephomework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -35,64 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IShape.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Services\\IShape.cs",
-              "RelativeDocumentMoniker": "ItStepHomeWork\\Services\\IShape.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Services\\IShape.cs",
-              "RelativeToolTip": "ItStepHomeWork\\Services\\IShape.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAwwAoAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T15:14:56.522Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Triangle.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Classes\\Triangle.cs",
-              "RelativeDocumentMoniker": "ItStepHomeWork\\Classes\\Triangle.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Classes\\Triangle.cs",
-              "RelativeToolTip": "ItStepHomeWork\\Classes\\Triangle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T15:14:42.726Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Circle.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Classes\\Circle.cs",
-              "RelativeDocumentMoniker": "ItStepHomeWork\\Classes\\Circle.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Classes\\Circle.cs",
-              "RelativeToolTip": "ItStepHomeWork\\Classes\\Circle.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T15:14:50.627Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Square.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Classes\\Square.cs",
-              "RelativeDocumentMoniker": "ItStepHomeWork\\Classes\\Square.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Classes\\Square.cs",
-              "RelativeToolTip": "ItStepHomeWork\\Classes\\Square.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T15:11:06.127Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Program.cs",
               "RelativeDocumentMoniker": "ItStepHomeWork\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Program.cs",
               "RelativeToolTip": "ItStepHomeWork\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-26T07:07:00.223Z",
               "EditorCaption": ""

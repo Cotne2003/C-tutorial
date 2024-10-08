@@ -1,18 +1,37 @@
-﻿using ItStepHomeWork.Classes;
-
-internal class Program
+﻿internal class Program
 {
 	static void Main(string[] args)
 	{
-		Square square = new Square();
-		Console.WriteLine(square.GetSquareArea(10));
-
-		Triangle triangle = new Triangle();
-		Console.WriteLine(triangle.GetTriangleArea(10, 20));
-
-		Circle circle = new Circle();
-		Console.WriteLine(circle.GetCircleArea(10));
+		Armstrong test = new Armstrong(153);
+		Console.WriteLine(test.IsArmstrong());
 	}
+}
+
+class Armstrong : IArmstrong
+{
+    public int Num { get; set; }
+    public Armstrong(int num)
+    {
+        Num = num;
+    }
+	public bool IsArmstrong()
+	{
+		string numToString = Num.ToString();
+		int count = 0;
+		for (int i = 0; i < numToString.Length; i++)
+		{
+			int stringToNum = (int)numToString[i];
+			count += (int)Math.Pow(stringToNum, 3);
+		}
+		if (Num == count)
+			return true;
+		return false;
+	}
+}
+
+interface IArmstrong
+{
+	public bool IsArmstrong();
 }
 
 
