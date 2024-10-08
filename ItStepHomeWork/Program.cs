@@ -20,7 +20,7 @@ class Armstrong : IArmstrong
 		int count = 0;
 		for (int i = 0; i < numToString.Length; i++)
 		{
-			int stringToNum = (int)numToString[i];
+			int.TryParse(numToString[i].ToString(), out int stringToNum);
 			count += (int)Math.Pow(stringToNum, 3);
 		}
 		if (Num == count)
