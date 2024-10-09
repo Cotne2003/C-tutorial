@@ -2,36 +2,51 @@
 {
 	static void Main(string[] args)
 	{
-		Armstrong test = new Armstrong(153);
-		Console.WriteLine(test.IsArmstrong());
-	}
-}
+		Gauge g = new Gauge();
 
-class Armstrong : IArmstrong
-{
-    public int Num { get; set; }
-    public Armstrong(int num)
-    {
-        Num = num;
-    }
-	public bool IsArmstrong()
-	{
-		string numToString = Num.ToString();
-		int count = 0;
-		for (int i = 0; i < numToString.Length; i++)
+		while (!g.Full())
 		{
-			int.TryParse(numToString[i].ToString(), out int stringToNum);
-			count += (int)Math.Pow(stringToNum, 3);
+			Console.WriteLine("Not full! Value: " + g.Value);
+			g.Increase();
 		}
-		if (Num == count)
-			return true;
-		return false;
+
+		Console.WriteLine("Full! Value: " + g.Value);
+		g.Decrease();
+		Console.WriteLine("Not full! Value: " + g.Value);
 	}
+	class Gauge
+	{
+        public int Value { get; set; }
+        public Gauge()
+        {
+			Value = 0;
+        }
+		public void Increase()
+		{
+			Value++;
+			if (Value >= 5)
+			{
+				Value = 5;
+			}
+		}
+		public void Decrease()
+		{
+			Value--;
+			if (Value <= 0)
+			{
+				Value = 0;
+			}
+		}
+		public bool Full()
+		{
+			if (Value == 5)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+    }
 }
-
-interface IArmstrong
-{
-	public bool IsArmstrong();
-}
-
-
