@@ -1,52 +1,46 @@
-﻿internal class Program
+﻿using System.Diagnostics.Metrics;
+
+internal class Program
 {
 	static void Main(string[] args)
 	{
-		Gauge g = new Gauge();
-
-		while (!g.Full())
+		try
 		{
-			Console.WriteLine("Not full! Value: " + g.Value);
-			g.Increase();
+			int format = int.Parse(Console.ReadLine());
+		}
+		catch (Exception)
+		{
+			Console.WriteLine("Format exception here.");
 		}
 
-		Console.WriteLine("Full! Value: " + g.Value);
-		g.Decrease();
-		Console.WriteLine("Not full! Value: " + g.Value);
+		try
+		{
+			int zero = int.Parse(Console.ReadLine());
+			int dividedZero = 10 / zero;
+		}
+		catch (Exception)
+		{
+			Console.WriteLine("Divided by zero exception here.");
+		}
+
+		string nullString = null;
+		try
+		{
+			Console.WriteLine(nullString.Length);
+		}
+		catch (Exception)
+		{
+			Console.WriteLine("Null exception is here");
+		}
+
+		try
+		{
+			int[] arr = new int[3];
+			arr[5] = 3;
+		}
+		catch (Exception)
+		{
+			Console.WriteLine("Index out of range exception here");
+		}
 	}
-	class Gauge
-	{
-        public int Value { get; set; }
-        public Gauge()
-        {
-			Value = 0;
-        }
-		public void Increase()
-		{
-			Value++;
-			if (Value >= 5)
-			{
-				Value = 5;
-			}
-		}
-		public void Decrease()
-		{
-			Value--;
-			if (Value <= 0)
-			{
-				Value = 0;
-			}
-		}
-		public bool Full()
-		{
-			if (Value == 5)
-			{
-				return true;
-			}
-			else
-			{
-				return false;
-			}
-		}
-    }
 }
