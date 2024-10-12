@@ -4,43 +4,49 @@ internal class Program
 {
 	static void Main(string[] args)
 	{
-		try
+		using (FileStream fs = new FileStream("C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\tsotne.txt", FileMode.Create))
 		{
-			int format = int.Parse(Console.ReadLine());
+			fs.Close();
 		}
-		catch (Exception)
+	}
+	public class CustomClass : IDisposable
+	{
+		public bool isResourceOpen = false;
+		public void OpenResource()
 		{
-			Console.WriteLine("Format exception here.");
+			Console.WriteLine("Resource is open");
+			isResourceOpen = true;
 		}
-
-		try
+		public void UseResource()
 		{
-			int zero = int.Parse(Console.ReadLine());
-			int dividedZero = 10 / zero;
+			if (!isResourceOpen)
+			{
+				throw new InvalidOperationException("Resource is not opened");
+			}
 		}
-		catch (Exception)
+		public void CloseResource()
 		{
-			Console.WriteLine("Divided by zero exception here.");
+			Console.WriteLine("Resource is close");
+			isResourceOpen = false;
 		}
-
-		string nullString = null;
-		try
+		public virtual void Dispose(bool disposing)
 		{
-			Console.WriteLine(nullString.Length);
+			if (disposing)
+			{
+				if (isResourceOpen)
+				{
+					CloseResource();
+				}
+			}
 		}
-		catch (Exception)
+		public void Dispose()
 		{
-			Console.WriteLine("Null exception is here");
+			Dispose(true);
+			GC.SuppressFinalize(this);
 		}
-
-		try
+		~CustomClass()
 		{
-			int[] arr = new int[3];
-			arr[5] = 3;
-		}
-		catch (Exception)
-		{
-			Console.WriteLine("Index out of range exception here");
+			Dispose(false);
 		}
 	}
 }
