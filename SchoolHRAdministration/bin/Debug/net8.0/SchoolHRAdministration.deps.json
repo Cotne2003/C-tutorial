@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "SchoolHRAdministration/1.0.0": {
+        "dependencies": {
+          "HRAdministrationApi": "1.0.0"
+        },
+        "runtime": {
+          "SchoolHRAdministration.dll": {}
+        }
+      },
+      "HRAdministrationApi/1.0.0": {
+        "runtime": {
+          "HRAdministrationApi.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SchoolHRAdministration/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "HRAdministrationApi/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

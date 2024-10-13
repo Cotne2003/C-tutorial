@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItStepHomeWork", "ItStepHomeWork\ItStepHomeWork.csproj", "{94851001-3468-44FE-9DF0-B15DFA746039}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItStepHomeWork", "ItStepHomeWork\ItStepHomeWork.csproj", "{94851001-3468-44FE-9DF0-B15DFA746039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRAdministrationApi", "HRAdministrationApi\HRAdministrationApi.csproj", "{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolHRAdministration", "SchoolHRAdministration\SchoolHRAdministration.csproj", "{A8C68A7B-8FBD-442A-90FD-15D5DEA83F9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{94851001-3468-44FE-9DF0-B15DFA746039}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94851001-3468-44FE-9DF0-B15DFA746039}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94851001-3468-44FE-9DF0-B15DFA746039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C68A7B-8FBD-442A-90FD-15D5DEA83F9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C68A7B-8FBD-442A-90FD-15D5DEA83F9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C68A7B-8FBD-442A-90FD-15D5DEA83F9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C68A7B-8FBD-442A-90FD-15D5DEA83F9C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
