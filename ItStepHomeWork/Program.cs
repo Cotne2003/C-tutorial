@@ -1,50 +1,60 @@
-﻿using System.Diagnostics.Metrics;
-
-internal class Program
+﻿internal class Program
 {
 	static void Main(string[] args)
 	{
-		using (FileStream fs = new FileStream("C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\tsotne.txt", FileMode.Create))
+		DatabaseSimulation ds = new DatabaseSimulation();
+		using (ds)
 		{
-			fs.Close();
+			ds.OpenResource();
+			ds.UseResource();
 		}
 	}
-	public class CustomClass : IDisposable
+
+	class DatabaseSimulation : IDisposable
 	{
-		public bool isResourceOpen = false;
+		private bool isDatabaseOpen = false;
+
 		public void OpenResource()
 		{
-			Console.WriteLine("Resource is open");
-			isResourceOpen = true;
+			isDatabaseOpen = true;
+			Console.WriteLine("Database is opened...");
 		}
 		public void UseResource()
 		{
-			if (!isResourceOpen)
+			if (isDatabaseOpen)
 			{
-				throw new InvalidOperationException("Resource is not opened");
+				Console.WriteLine("Information is coming...");
+			}
+			else
+			{
+				throw new InvalidOperationException("Can not access information");
 			}
 		}
-		public void CloseResource()
+		private void CloseResource()
 		{
-			Console.WriteLine("Resource is close");
-			isResourceOpen = false;
+			isDatabaseOpen = false;
+			Console.Write("Databes is closed...");
 		}
-		public virtual void Dispose(bool disposing)
+
+		public void Dispose(bool disposing)
 		{
 			if (disposing)
 			{
-				if (isResourceOpen)
+				if (isDatabaseOpen)
 				{
 					CloseResource();
+					Console.Write(" via Dispose");
 				}
 			}
 		}
+
 		public void Dispose()
 		{
 			Dispose(true);
 			GC.SuppressFinalize(this);
 		}
-		~CustomClass()
+
+		~DatabaseSimulation()
 		{
 			Dispose(false);
 		}
