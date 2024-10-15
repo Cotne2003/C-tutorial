@@ -7,12 +7,8 @@
       "RelativeMoniker": "D:0:0:{A8C68A7B-8FBD-442A-90FD-15D5DEA83F9C}|SchoolHRAdministration\\SchoolHRAdministration.csproj|solutionrelative:schoolhradministration\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}|HRAdministrationApi\\HRAdministrationApi.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\hradministrationapi\\iemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}|HRAdministrationApi\\HRAdministrationApi.csproj|solutionrelative:hradministrationapi\\iemployee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}|HRAdministrationApi\\HRAdministrationApi.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\hradministrationapi\\employeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}|HRAdministrationApi\\HRAdministrationApi.csproj|solutionrelative:hradministrationapi\\employeebase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}|HRAdministrationApi\\HRAdministrationApi.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\hradministrationapi\\factorypattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8CA9066-4EA8-44B3-A077-3E4CA48495B5}|HRAdministrationApi\\HRAdministrationApi.csproj|solutionrelative:hradministrationapi\\factorypattern.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,8 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FactoryPattern.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\FactoryPattern.cs",
+              "RelativeDocumentMoniker": "HRAdministrationApi\\FactoryPattern.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\FactoryPattern.cs",
+              "RelativeToolTip": "HRAdministrationApi\\FactoryPattern.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T23:53:39.136Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -32,35 +41,9 @@
               "RelativeDocumentMoniker": "SchoolHRAdministration\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\Program.cs",
               "RelativeToolTip": "SchoolHRAdministration\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-13T21:11:39.269Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmployeeBase.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\EmployeeBase.cs",
-              "RelativeDocumentMoniker": "HRAdministrationApi\\EmployeeBase.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\EmployeeBase.cs",
-              "RelativeToolTip": "HRAdministrationApi\\EmployeeBase.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T21:08:38.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IEmployee.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\IEmployee.cs",
-              "RelativeDocumentMoniker": "HRAdministrationApi\\IEmployee.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\IEmployee.cs",
-              "RelativeToolTip": "HRAdministrationApi\\IEmployee.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA0AAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-13T21:02:05.088Z",
               "EditorCaption": ""
             }
           ]

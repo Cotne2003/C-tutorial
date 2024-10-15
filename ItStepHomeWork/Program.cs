@@ -2,61 +2,27 @@
 {
 	static void Main(string[] args)
 	{
-		DatabaseSimulation ds = new DatabaseSimulation();
-		using (ds)
+		int a = 1;
+		int b = 2;
+		int c = 3;
+
+		NewCont(a, b, c);
+
+		static void NewCont<T>(T a,T b,T c)
 		{
-			ds.OpenResource();
-			ds.UseResource();
+			MyContainer<T> Cont = new MyContainer<T>(a, b, c);
+
+			Console.WriteLine($"{Cont.Item[0]} {Cont.Item[1]} {Cont.Item[2]}");
 		}
 	}
-
-	class DatabaseSimulation : IDisposable
+	class MyContainer<T>
 	{
-		private bool isDatabaseOpen = false;
-
-		public void OpenResource()
-		{
-			isDatabaseOpen = true;
-			Console.WriteLine("Database is opened...");
-		}
-		public void UseResource()
-		{
-			if (isDatabaseOpen)
-			{
-				Console.WriteLine("Information is coming...");
-			}
-			else
-			{
-				throw new InvalidOperationException("Can not access information");
-			}
-		}
-		private void CloseResource()
-		{
-			isDatabaseOpen = false;
-			Console.Write("Databes is closed...");
-		}
-
-		public void Dispose(bool disposing)
-		{
-			if (disposing)
-			{
-				if (isDatabaseOpen)
-				{
-					CloseResource();
-					Console.Write(" via Dispose");
-				}
-			}
-		}
-
-		public void Dispose()
-		{
-			Dispose(true);
-			GC.SuppressFinalize(this);
-		}
-
-		~DatabaseSimulation()
-		{
-			Dispose(false);
-		}
-	}
+		public T[] Item = new T[3];
+        public MyContainer(T a, T b, T c)
+        {
+			Item[0] = a;
+			Item[1] = b;
+			Item[2] = c;
+        }
+    }
 }
