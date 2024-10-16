@@ -1,29 +1,12 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
-      "HRAdministrationApi/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/HRAdministrationApi.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/HRAdministrationApi.dll": {}
-        }
-      }
-    }
+    "net8.0": {}
   },
-  "libraries": {
-    "HRAdministrationApi/1.0.0": {
-      "type": "project",
-      "path": "../HRAdministrationApi/HRAdministrationApi.csproj",
-      "msbuildProject": "../HRAdministrationApi/HRAdministrationApi.csproj"
-    }
-  },
+  "libraries": {},
   "projectFileDependencyGroups": {
     "net8.0": [
-      "HRAdministrationApi >= 1.0.0"
+      "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\HRAdministrationApi.csproj"
     ]
   },
   "packageFolders": {
@@ -32,9 +15,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\SchoolHRAdministration.csproj",
-      "projectName": "SchoolHRAdministration",
-      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\SchoolHRAdministration.csproj",
+      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\DelegateBasicExample.csproj",
+      "projectName": "DelegateBasicExample",
+      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\DelegateBasicExample.csproj",
       "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\obj\\",
       "projectStyle": "PackageReference",
@@ -93,5 +76,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\HRAdministrationApi.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\HRAdministrationApi.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }

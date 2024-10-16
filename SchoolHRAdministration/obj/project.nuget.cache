@@ -1,8 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "gl3ZbNwFvw4=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\SchoolHRAdministration.csproj",
+  "dgSpecHash": "8H58zPXzqcA=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\SchoolHRAdministration\\DelegateBasicExample.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\HRAdministrationApi.csproj'. If you are using Visual Studio, this may be because the project is unloaded or not part of the current solution so run a restore from the command-line. Otherwise, the project file may be invalid or missing targets required for restore.",
+      "libraryId": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\HRAdministrationApi\\HRAdministrationApi.csproj",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
