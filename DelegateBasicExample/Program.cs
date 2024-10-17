@@ -3,16 +3,16 @@
 
 	internal class Program
 	{
-		delegate void LogDel(string text, DateTime dateTime);
+		delegate void LogDel(string text);
 		static void Main(string[] args)
 		{
 			LogDel logDel = new LogDel(LogTextScreen);
 
-			logDel("text", DateTime.Now);
+			logDel("text");
 		}
-		static void LogTextScreen(string text, DateTime dateTime)
+		static void LogTextScreen(string text)
 		{
-			Console.WriteLine($"{dateTime}: {text}");
+			Console.WriteLine($"{DateTime.Now}: {text}");
 		}
 	}
 }

@@ -2,27 +2,19 @@
 {
 	static void Main(string[] args)
 	{
-		int a = 1;
-		int b = 2;
-		int c = 3;
+		Console.WriteLine(FindMaximum(30, 20));
+		Console.WriteLine(FindMaximum("a", "b"));
 
-		NewCont(a, b, c);
-
-		static void NewCont<T>(T a,T b,T c)
+		static T FindMaximum<T>(T value1, T value2) where T : IComparable<T>
 		{
-			MyContainer<T> Cont = new MyContainer<T>(a, b, c);
-
-			Console.WriteLine($"{Cont.Item[0]} {Cont.Item[1]} {Cont.Item[2]}");
+			if (value1.CompareTo(value2) > 0)
+			{
+				return value1;
+			}
+			else
+			{
+				return value2;
+			}
 		}
 	}
-	class MyContainer<T>
-	{
-		public T[] Item = new T[3];
-        public MyContainer(T a, T b, T c)
-        {
-			Item[0] = a;
-			Item[1] = b;
-			Item[2] = c;
-        }
-    }
 }
