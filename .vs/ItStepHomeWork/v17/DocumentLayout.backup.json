@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{18B28FF1-6477-493D-A565-73B742F66C97}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\clubmembersshipapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18B28FF1-6477-493D-A565-73B742F66C97}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|solutionrelative:clubmembersshipapplication\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{18B28FF1-6477-493D-A565-73B742F66C97}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\clubmembersshipapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18B28FF1-6477-493D-A565-73B742F66C97}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|solutionrelative:clubmembersshipapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\itstephomework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{94851001-3468-44FE-9DF0-B15DFA746039}|ItStepHomeWork\\ItStepHomeWork.csproj|solutionrelative:itstephomework\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{18B28FF1-6477-493D-A565-73B742F66C97}|ClubMembersshipApplication\\ClubMembershipApplication.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\clubmembersshipapplication\\data\\clubmembershipdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{18B28FF1-6477-493D-A565-73B742F66C97}|ClubMembersshipApplication\\ClubMembershipApplication.csproj|solutionrelative:clubmembersshipapplication\\data\\clubmembershipdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\Models\\User.cs",
-              "RelativeDocumentMoniker": "ClubMembersshipApplication\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\Models\\User.cs",
-              "RelativeToolTip": "ClubMembersshipApplication\\Models\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T04:01:59.299Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\Program.cs",
-              "RelativeDocumentMoniker": "ClubMembersshipApplication\\Program.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\Program.cs",
-              "RelativeToolTip": "ClubMembersshipApplication\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-17T04:00:58.646Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Program.cs",
               "RelativeDocumentMoniker": "ItStepHomeWork\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ItStepHomeWork\\Program.cs",
               "RelativeToolTip": "ItStepHomeWork\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAIwCoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-16T23:44:59.072Z",
+              "WhenOpened": "2024-10-18T00:29:03.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClubMembershipDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\Data\\ClubMembershipDbContext.cs",
+              "RelativeDocumentMoniker": "ClubMembersshipApplication\\Data\\ClubMembershipDbContext.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\Data\\ClubMembershipDbContext.cs",
+              "RelativeToolTip": "ClubMembersshipApplication\\Data\\ClubMembershipDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-17T19:48:39.64Z",
               "EditorCaption": ""
             }
           ]

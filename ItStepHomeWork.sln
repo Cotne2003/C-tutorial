@@ -5,7 +5,7 @@ VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItStepHomeWork", "ItStepHomeWork\ItStepHomeWork.csproj", "{94851001-3468-44FE-9DF0-B15DFA746039}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubMembersshipApplication", "ClubMembersshipApplication\ClubMembersshipApplication.csproj", "{18B28FF1-6477-493D-A565-73B742F66C97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubMembershipApplication", "ClubMembersshipApplication\ClubMembershipApplication.csproj", "{18B28FF1-6477-493D-A565-73B742F66C97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
