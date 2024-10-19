@@ -1,18 +1,6 @@
-﻿ProgressReporter p = WriteProgressToConsole;
-p += WriteProgressToFile;
-Util.HardWork(p);
-void WriteProgressToConsole(int percentComplete) => Console.WriteLine(percentComplete);
-void WriteProgressToFile(int percentComplete) => System.IO.File.WriteAllText("progress.txt", percentComplete.ToString());
-
-public delegate void ProgressReporter(int percentComplete);
-public class Util
-{
-	public static void HardWork(ProgressReporter p)
-	{
-		for (int i = 0; i < 10; i++)
-		{
-			p(i * 10); // Invoke delegate
-			System.Threading.Thread.Sleep(100); // Simulate hard work
-		}
-	}
-}
+﻿delegate TResult Func<out TResult>();
+delegate TResult Func<in T, out TResult>(T arg);
+delegate TResult Func<in T1, in T2, out TResult>(T1 arg1, T2 arg2);
+delegate void Action();
+delegate void Action<in T>(T arg);
+delegate void Action<in T1, in T2>(T1 arg1, T2 arg2);
