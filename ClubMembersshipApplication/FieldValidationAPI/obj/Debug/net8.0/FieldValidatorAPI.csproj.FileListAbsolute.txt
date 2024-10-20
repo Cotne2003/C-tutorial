@@ -1,0 +1,11 @@
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\bin\Debug\net8.0\FieldValidatorAPI.deps.json
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\bin\Debug\net8.0\FieldValidatorAPI.dll
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\bin\Debug\net8.0\FieldValidatorAPI.pdb
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\FieldValidatorAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\FieldValidatorAPI.AssemblyInfoInputs.cache
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\FieldValidatorAPI.AssemblyInfo.cs
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\FieldValidatorAPI.csproj.CoreCompileInputs.cache
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\FieldValidatorAPI.dll
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\refint\FieldValidatorAPI.dll
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\FieldValidatorAPI.pdb
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\FieldValidationAPI\obj\Debug\net8.0\ref\FieldValidatorAPI.dll
