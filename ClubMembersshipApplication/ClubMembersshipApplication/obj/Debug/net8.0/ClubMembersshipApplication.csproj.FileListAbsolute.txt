@@ -119,3 +119,5 @@ C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\ClubMembersship
 C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\ClubMembersshipApplication\obj\Debug\net8.0\ClubMembersshipApplication.pdb
 C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\ClubMembersshipApplication\obj\Debug\net8.0\ClubMembersshipApplication.genruntimeconfig.cache
 C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\ClubMembersshipApplication\obj\Debug\net8.0\ref\ClubMembersshipApplication.dll
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\ClubMembersshipApplication\bin\Debug\net8.0\FieldValidatorAPI.dll
+C:\Users\Tsotne\OneDrive\Desktop\hehe\ClubMembersshipApplication\ClubMembersshipApplication\bin\Debug\net8.0\FieldValidatorAPI.pdb

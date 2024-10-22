@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\FieldValidationAPI\\FieldValidatorAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\FieldValidationAPI\\FieldValidatorAPI.csproj",
       "projectName": "FieldValidatorAPI",
-      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\FieldValidationAPI\\FieldValidatorAPI.csproj",
+      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\FieldValidationAPI\\FieldValidatorAPI.csproj",
       "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\FieldValidationAPI\\obj\\",
+      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\FieldValidationAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -15,4 +15,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FieldValidationAPI\FieldValidatorAPI.csproj" />
+  </ItemGroup>
+
 </Project>

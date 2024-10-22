@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|c:\\users\\tsotne\\onedrive\\desktop\\hehe\\clubmembersshipapplication\\clubmembersshipapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|solutionrelative:clubmembersshipapplication\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|c:\\users\\tsotne\\onedrive\\desktop\\hehe\\clubmembersshipapplication\\clubmembersshipapplication\\fieldvalidators\\userregistrationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|solutionrelative:clubmembersshipapplication\\fieldvalidators\\userregistrationvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|c:\\users\\tsotne\\onedrive\\desktop\\hehe\\clubmembersshipapplication\\clubmembersshipapplication\\fieldvalidators\\fieldconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|solutionrelative:clubmembersshipapplication\\fieldvalidators\\fieldconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|c:\\users\\tsotne\\onedrive\\desktop\\hehe\\clubmembersshipapplication\\clubmembersshipapplication\\fieldvalidators\\ifieldvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F501186B-630E-4D3C-AF47-A660651E8FD0}|ClubMembersshipApplication\\ClubMembersshipApplication.csproj|solutionrelative:clubmembersshipapplication\\fieldvalidators\\ifieldvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D2808F9-20D9-4DE7-8CEF-A17119B68C70}|FieldValidationAPI\\FieldValidatorAPI.csproj|c:\\users\\tsotne\\onedrive\\desktop\\hehe\\clubmembersshipapplication\\fieldvalidationapi\\commonfieldvalidatorfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D2808F9-20D9-4DE7-8CEF-A17119B68C70}|FieldValidationAPI\\FieldValidatorAPI.csproj|solutionrelative:fieldvalidationapi\\commonfieldvalidatorfunctions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserRegistrationValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
-              "RelativeDocumentMoniker": "ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
-              "RelativeToolTip": "ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\Program.cs",
+              "RelativeDocumentMoniker": "ClubMembersshipApplication\\Program.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\Program.cs",
+              "RelativeToolTip": "ClubMembersshipApplication\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAABQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T03:48:42.174Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FieldConstants.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\FieldConstants.cs",
-              "RelativeDocumentMoniker": "ClubMembersshipApplication\\FieldValidators\\FieldConstants.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\FieldConstants.cs",
-              "RelativeToolTip": "ClubMembersshipApplication\\FieldValidators\\FieldConstants.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBYAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T03:46:26.112Z",
+              "WhenOpened": "2024-10-21T01:38:59.995Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "IFieldValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\IFieldValidator.cs",
-              "RelativeDocumentMoniker": "ClubMembersshipApplication\\FieldValidators\\IFieldValidator.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\IFieldValidator.cs",
-              "RelativeToolTip": "ClubMembersshipApplication\\FieldValidators\\IFieldValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Title": "CommonFieldValidatorFunctions.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\FieldValidationAPI\\CommonFieldValidatorFunctions.cs",
+              "RelativeDocumentMoniker": "FieldValidationAPI\\CommonFieldValidatorFunctions.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\FieldValidationAPI\\CommonFieldValidatorFunctions.cs",
+              "RelativeToolTip": "FieldValidationAPI\\CommonFieldValidatorFunctions.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-20T02:36:15.75Z",
+              "WhenOpened": "2024-10-21T01:27:55.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRegistrationValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
+              "RelativeDocumentMoniker": "ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
+              "RelativeToolTip": "ClubMembersshipApplication\\FieldValidators\\UserRegistrationValidator.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAqwCMAAABaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-21T01:22:46.698Z",
               "EditorCaption": ""
             }
           ]

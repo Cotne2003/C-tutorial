@@ -982,6 +982,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "FieldValidatorAPI/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/FieldValidatorAPI.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/FieldValidatorAPI.dll": {}
+        }
       }
     }
   },
@@ -2410,10 +2420,16 @@
         "system.threading.channels.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "FieldValidatorAPI/1.0.0": {
+      "type": "project",
+      "path": "../FieldValidationAPI/FieldValidatorAPI.csproj",
+      "msbuildProject": "../FieldValidationAPI/FieldValidatorAPI.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "FieldValidatorAPI >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.10",
       "Microsoft.EntityFrameworkCore.Tools >= 8.0.10"
     ]
@@ -2424,11 +2440,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\ClubMembersshipApplication\\ClubMembersshipApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\ClubMembersshipApplication.csproj",
       "projectName": "ClubMembersshipApplication",
-      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\ClubMembersshipApplication\\ClubMembersshipApplication.csproj",
+      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\ClubMembersshipApplication.csproj",
       "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClubMembersshipApplication\\ClubMembersshipApplication\\obj\\",
+      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\ClubMembersshipApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2445,7 +2461,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\FieldValidationAPI\\FieldValidatorAPI.csproj": {
+              "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\hehe\\ClubMembersshipApplication\\FieldValidationAPI\\FieldValidatorAPI.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
