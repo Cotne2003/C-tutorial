@@ -6,14 +6,19 @@ internal class Program
 	static void Main(string[] args)
 	{
 		Calculator calculator = new Calculator();
-		calculator.condition(10, 5);
+		Condition condition = null;
+		condition = calculator.Minus; 
+		condition += calculator.Plus; 
+		condition += calculator.Division; 
+		condition += calculator.Multiplication;
+		condition += calculator.Remainder;
+		condition(10, 5);
 	}
 
 	delegate double Condition(double a, double b);
 
 	class Calculator
 	{
-		public Condition condition = null;
 		public double Plus(double a, double b)
 		{
 			Console.WriteLine($"{a} + {b} = {a + b}");
@@ -33,6 +38,11 @@ internal class Program
 		{
 			Console.WriteLine($"{a} * {b} = {a * b}");
 			return a * b;
+		}
+		public double Remainder(double a, double b)
+		{
+			Console.WriteLine($"{a} % {b} = {a % b}");
+			return a % b;
 		}
 	}
 
