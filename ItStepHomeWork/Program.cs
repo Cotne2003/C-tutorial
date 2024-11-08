@@ -4,59 +4,37 @@
 	{
 		static void Main(string[] args)
 		{
-			List<Customer> customers = new List<Customer>()
-			{
-				new Customer("Tsotne", 1),
-				new Customer("Giorgi", 2),
-				new Customer("Mariami", 3),
-				new Customer("Andria", 2)
-			};
+			List<int> list1 = new List<int>() { 1, 2, 3, 5, 4, 4, 3, 2, 23 };
+			List<int> list2 = new List<int>() { 5, 6, 7, 3, 1, 5, 8 };
 
-			List<Item> items = new List<Item>()
-			{
-				new Item("Telephone"),
-				new Item("TV"),
-				new Item("Notebook"),
-			};
+			Console.WriteLine("Union");
 
-			var orders = customers.Join(items, c => c.OrderId, i => i.Id, (c, i) => new { c.Id, c.OrderId, c.Name, i.Title });
+			List<int> unionList = list1.Union(list2).ToList();
+			unionList.ForEach(x => Console.Write(x + " "));
 
-			foreach (var order in orders)
-			{
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine("Intersection");
 
-				Console.WriteLine("Customer Id: " + order.Id);
-				Console.WriteLine("Order Id: " + order.OrderId);
-				Console.WriteLine(order.Name);
-				Console.WriteLine(order.Title);
-				Console.WriteLine();
-			}
-			
-		}
-		class Customer
-		{
-			public int Id { get; private set; }
-			static private int IdHelper { get; set; }
-			public string Name { get; set; }
-			public int OrderId { get; set; }
-            public Customer(string name, int orderId)
-            {
-				IdHelper++;
-				Id = IdHelper;
-				Name = name;
-				OrderId = orderId;
-            }
-        }
-		class Item
-		{
-			public int Id { get; private set; }
-			static private int IdHelper { get; set; }
-			public string Title { get; set; }
-			public Item(string title)
-			{
-				IdHelper++;
-				Id = IdHelper;
-				Title = title;
-			}
+			List<int> interectionList = list1.Intersect(list2).ToList();
+			interectionList.ForEach(x => Console.Write(x + " "));
+
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine("Distinct");
+
+			List<int> distinctList = list1.Distinct().ToList();
+			distinctList.ForEach(x => Console.Write(x + " "));
+
+			Console.WriteLine();
+			Console.WriteLine();
+			Console.WriteLine("Except");
+
+			List<int> exceptList = list1.Except(list2).ToList();
+			exceptList.ForEach(x => Console.Write(x + " "));
+
+			Console.WriteLine();
+			Console.WriteLine();
 		}
 	}
 }
