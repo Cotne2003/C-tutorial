@@ -1,40 +1,40 @@
-﻿namespace Linq
+﻿using System.Linq;
+
+namespace Linq
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			List<int> list1 = new List<int>() { 1, 2, 3, 5, 4, 4, 3, 2, 23 };
-			List<int> list2 = new List<int>() { 5, 6, 7, 3, 1, 5, 8 };
+			Sorter sorter = new Sorter();
+			ComparisonDelegate comparison = sorter.Assending;
 
-			Console.WriteLine("Union");
+			List<int> integers = new List<int>() { 1, 2, 3, 4, 5 };
+			
 
-			List<int> unionList = list1.Union(list2).ToList();
-			unionList.ForEach(x => Console.Write(x + " "));
+		}
 
-			Console.WriteLine();
-			Console.WriteLine();
-			Console.WriteLine("Intersection");
+		delegate int ComparisonDelegate(int a, int b);
 
-			List<int> interectionList = list1.Intersect(list2).ToList();
-			interectionList.ForEach(x => Console.Write(x + " "));
-
-			Console.WriteLine();
-			Console.WriteLine();
-			Console.WriteLine("Distinct");
-
-			List<int> distinctList = list1.Distinct().ToList();
-			distinctList.ForEach(x => Console.Write(x + " "));
-
-			Console.WriteLine();
-			Console.WriteLine();
-			Console.WriteLine("Except");
-
-			List<int> exceptList = list1.Except(list2).ToList();
-			exceptList.ForEach(x => Console.Write(x + " "));
-
-			Console.WriteLine();
-			Console.WriteLine();
+		class Sorter
+		{
+			public int Assending(int a, int b)
+			{
+				if (a > b)
+					return 1;
+				if (a < b)
+					return -1;
+				return 0;
+			}
+			
+			public int Desending(int a, int b)
+			{
+				if (a > b)
+					return -1;
+				if (a < b)
+					return 1;
+				return 0;
+			}
 		}
 	}
 }
