@@ -6,35 +6,22 @@ namespace Linq
 	{
 		static void Main(string[] args)
 		{
-			Sorter sorter = new Sorter();
-			ComparisonDelegate comparison = sorter.Assending;
-
-			List<int> integers = new List<int>() { 1, 2, 3, 4, 5 };
-			
-
+			List<double> nums = new List<double>() { 1, 2, 3};
+			List<double> nums2 = new List<double>() { 1, 2, 3, 4, 6, 5, 8, 7};
+			nums2.Sort();
+			Console.WriteLine(nums);
+			Console.WriteLine(nums.Median());
+			Console.WriteLine(nums2.Median());
 		}
-
-		delegate int ComparisonDelegate(int a, int b);
-
-		class Sorter
+	}
+	static class ListExtension
+	{
+		public static double Median(this List<double> list)
 		{
-			public int Assending(int a, int b)
-			{
-				if (a > b)
-					return 1;
-				if (a < b)
-					return -1;
-				return 0;
-			}
-			
-			public int Desending(int a, int b)
-			{
-				if (a > b)
-					return -1;
-				if (a < b)
-					return 1;
-				return 0;
-			}
+			if (list.Count % 2 == 0)
+				return (list[list.Count / 2] + list[list.Count / 2 - 1]) / 2;
+
+			return list[list.Count / 2];
 		}
 	}
 }
