@@ -1,98 +1,77 @@
-﻿using System.Linq;
-using System.Net.Security;
-using System.Text;
-
-namespace FileStreams
+﻿namespace FileStreams
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			//List<Person> people = new List<Person>()
+			//List<int> numbers = new List<int> { 1, 3, 5, 7, 9 };
+
+			//bool result = numbers.Any(x => x % 2 == 0);
+			//Console.WriteLine(result);
+
+			//List<string> words = new List<string> { "apple", "banana", "cherry", "date" };
+
+			//bool result = words.Any(s => s.Length > 5);
+			//Console.WriteLine(result);
+
+			//List<Student> Students = new List<Student>
 			//{
-			//	new Person { Id = 1, Name = "Tsotne", },
-			//	new Person { Id = 2, Name = "Giorgi", },
-			//	new Person { Id = 3, Name = "Mariami", },
-			//	new Person { Id = 4, Name = "Andria", },
-			//	new Person { Id = 5, Name = "Andria" }
+			//	new Student { Name = "Alice", Age = 22 },
+			//	new Student { Name = "Bob", Age = 17 },
+			//	new Student { Name = "Charlie", Age = 19 }
 			//};
 
-			//people.ForEach(person => Console.WriteLine(person.Id));
+			//bool result = Students.Any(s => s.Age < 18);
+			//Console.WriteLine(result);
 
-			//var byName = from person in people
-			//			 where person.Name == "Andria"
-			//			 select person;
-
-			//var SelectedNames = from person in people
-			//				   select person.Name;
-
-
-			//byte[] initialData = { 0x01, 0x02, 0x03, 0x04, 0x05 }; // 0-9 A(10)B(11)C(12)D(13)E(14)F(15) 0*16^1 + 1*16^0 = 0 + 1 = 1
-
-			//using (MemoryStream memoryStream = new MemoryStream())
+			//List<List<int>> listOfLists = new List<List<int>>
 			//{
-			//	memoryStream.Write(initialData, 0, initialData.Length);
-			//	memoryStream.Seek(0, SeekOrigin.Begin);
+			//	new List<int> {1, 2, 3},
+			//	new List<int> { },
+			//	new List<int> { 4, 5 }
+			//};
 
-			//	byte[] buffer = new byte[memoryStream.Length];
+			//bool result = listOfLists.Any(list => list.Count == 0);
+			//Console.WriteLine(result);
 
-			//	memoryStream.Read(buffer, 0, buffer.Length);
-			//	var content = BitConverter.ToString(buffer);
-			//	Console.WriteLine($"Data: {content}");
+			//List<User> users = new List<User>
+			//{
+			//	new User { Name = "John", Persmissions = new List<string> { "Read", "Write" } },
+			//	new User { Name = "Jane", Persmissions = new List<string> { "Read", "Admin" } },
+			//	new User { Name = "Jane", Persmissions = new List<string> { "Read" } }
+			//};
+			//bool result = users.Any(user => user.Persmissions.Contains("Admin"));
+			//Console.WriteLine(result);
 
-			//	byte[] newData = { 0x06, 0x07, 0x08 };
-			//	memoryStream.Write(newData, 0, newData.Length);
+			//List<string> strings = new List<string> { "hello", "", null, "world" };
 
-			//	memoryStream.Seek(0, SeekOrigin.Begin);
-			//	buffer = new byte[memoryStream.Length];
-			//	memoryStream.Read(buffer, 0, buffer.Length);
-			//	Console.WriteLine("Combined data: " + BitConverter.ToString(buffer));
-			//}
+			//bool result = strings.Any(s => s == null || s.Length == 0);
+			//Console.WriteLine(result);
 
-			const string path = "C:\\Users\\Tsotne\\OneDrive\\Desktop\\HomeWork\\text.txt";
-			using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
-			{
-				StreamWriter writer = new StreamWriter(fs);
-				writer.WriteLine("-Hello FileStream!");
-				writer.WriteLine("-Hello C#!");
+			//List<DateTime> dates = new List<DateTime>
+			//{
+			//	DateTime.Now.AddDays(1),
+			//	DateTime.Now.AddDays(-5),
+			//	DateTime.Now.AddDays(10),
+			//};
 
-				writer.Flush();
+			//bool result = dates.Any(d => d < DateTime.Now);
+			//Console.WriteLine(result);
 
-				fs.Seek(0, SeekOrigin.Begin);
+			List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 1 };
 
-				StreamReader reader = new StreamReader(fs);
-
-				string result = reader.ReadToEnd();
-				Console.WriteLine(result);
-
-				writer.Close();
-				reader.Close();
-			}
-
-			using (MemoryStream ms = new MemoryStream())
-			{
-				StreamWriter writer = new StreamWriter(ms);
-				writer.WriteLine("-Hello MemoryStream!");
-				writer.WriteLine("-Hello C#!");
-
-				writer.Flush();
-
-				ms.Seek(0, SeekOrigin.Begin);
-
-				StreamReader reader = new StreamReader(ms);
-
-				string result = reader.ReadToEnd();
-				Console.WriteLine(result);
-
-				writer.Close();
-				reader.Close();
-			}
 		}
 
-		//class Person
+		//class Student
 		//{
-		//	public int Id { get;  set; }
 		//	public string Name { get; set; }
-  //      }
+		//	public int Age { get; set; }
+		//}
+
+		//class User
+		//{
+		//	public string Name { get; set; }
+		//	public List<string> Persmissions { get; set; }
+		//}
 	}
 }
