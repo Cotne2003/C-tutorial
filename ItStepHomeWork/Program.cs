@@ -4,26 +4,23 @@
 	{
 		static void Main(string[] args)
 		{
-			const string path = "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ClassWork\\data.bin";
-			string test = "";
+			const string mainPath = "C:\\Users\\Tsotne\\OneDrive\\Desktop\\";
+			DirectoryInfo desktopInfo = new DirectoryInfo(mainPath);
 
-			using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
-			using (BinaryWriter bw = new BinaryWriter(fs))
+			DirectoryInfo loginData = new DirectoryInfo(mainPath + "Login Data");
+			if (!loginData.Exists)
 			{
-				bw.Write(30);
-				bw.Write("hello");
-				bw.Write('h');
-				bw.Write(true);
-				bw.Write(1.5);
-				bw.Write(1.5m);
-				using (BinaryReader br = new BinaryReader(fs))
-				{
-					Console.WriteLine(br.ReadInt32());
-					Console.WriteLine(br.ReadString());
-					Console.WriteLine(br.ReadChar());
-				}
-
+				loginData = desktopInfo.CreateSubdirectory("Login Data");
 			}
+
+			string dateTime = DateTime.Now.ToString("MM-dd-yyyy");
+
+			DirectoryInfo loginInfo = new DirectoryInfo(loginData.FullName + $"\\Login at {dateTime}");
+			if (!loginInfo.Exists)
+			{
+				loginInfo = loginData.CreateSubdirectory($"Login at {dateTime}");
+			}
+
 		}
 	}
 }
