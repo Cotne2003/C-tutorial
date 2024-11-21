@@ -1,26 +1,33 @@
-﻿namespace FileStreams
+﻿using System.Text.Json;
+
+namespace FileStreams
 {
 	internal class Program
 	{
 		static void Main(string[] args)
 		{
-			const string mainPath = "C:\\Users\\Tsotne\\OneDrive\\Desktop\\";
-			DirectoryInfo desktopInfo = new DirectoryInfo(mainPath);
+			var url = "https://open.er-api.com/v6/latest/USD";
 
-			DirectoryInfo loginData = new DirectoryInfo(mainPath + "Login Data");
-			if (!loginData.Exists)
+			using (HttpClient client = new HttpClient())
 			{
-				loginData = desktopInfo.CreateSubdirectory("Login Data");
+				var response = client.GetAsync(url).Result;
+				string responsBody = response.Content.ReadAsStringAsync().Result;
+
+				ExchangeRatesResponse deserializedRates = JsonSerializer.Deserialize<ExchangeRatesResponse>(responsBody);
 			}
-
-			string dateTime = DateTime.Now.ToString("MM-dd-yyyy");
-
-			DirectoryInfo loginInfo = new DirectoryInfo(loginData.FullName + $"\\Login at {dateTime}");
-			if (!loginInfo.Exists)
-			{
-				loginInfo = loginData.CreateSubdirectory($"Login at {dateTime}");
-			}
-
 		}
+
+		class ExchangeRatesResponse
+		{
+			public Rates rates { get; set; }
+		}
+
+		class Rates
+		{
+			public double USD { get; set; }
+			public double EUR { get; set; }
+			public double GEL { get; set; }
+		}
+
 	}
 }
