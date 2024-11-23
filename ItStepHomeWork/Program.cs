@@ -1,33 +1,42 @@
-﻿using System.Text.Json;
-
-namespace FileStreams
+﻿namespace HangMan
 {
-	internal class Program
+	internal class HangMan
 	{
-		static void Main(string[] args)
+		static void Main(string[] Args)
 		{
-			var url = "https://open.er-api.com/v6/latest/USD";
+			Console.WriteLine("Hello, this is \"Hang Man\".");
 
-			using (HttpClient client = new HttpClient())
+
+			Random random = new Random();
+			int rightAnswer = random.Next(1, 101);
+			Console.WriteLine(rightAnswer);
+
+			int inputNumber = GetNumber("Choose Your Number: ");
+
+			int attempt = 0;
+
+			while (inputNumber != rightAnswer)
 			{
-				var response = client.GetAsync(url).Result;
-				string responsBody = response.Content.ReadAsStringAsync().Result;
+				if (rightAnswer == inputNumber)
+					Console.WriteLine("its matched, bravooo!!!!");
+				else if (inputNumber > rightAnswer)
+					Console.WriteLine("To up");
+				else if (inputNumber > rightAnswer)
+					Console.WriteLine("To down");
+			}
 
-				ExchangeRatesResponse deserializedRates = JsonSerializer.Deserialize<ExchangeRatesResponse>(responsBody);
+
+
+			int GetNumber(string prompt)
+			{
+				while (true)
+				{
+					Console.Write(prompt);
+					if (int.TryParse(Console.ReadLine(), out int number))
+						return number;
+					Console.WriteLine("Invalid Number.");
+				}
 			}
 		}
-
-		class ExchangeRatesResponse
-		{
-			public Rates rates { get; set; }
-		}
-
-		class Rates
-		{
-			public double USD { get; set; }
-			public double EUR { get; set; }
-			public double GEL { get; set; }
-		}
-
 	}
 }
