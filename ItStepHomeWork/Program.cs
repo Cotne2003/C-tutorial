@@ -1,51 +1,72 @@
-﻿namespace GuessNumber
+﻿namespace HangMan
 {
-	internal class GuessNumber
+	internal class HangMan
 	{
 		static void Main(string[] Args)
 		{
-			Console.WriteLine("Welcome to \"Guess the Number\"! The rules are simple: guess the number between 1 and 100.\n");
+
+			string[] words = new string[] { "tiger", "house", "tree", "earth", "building", "castle", "doughter", "horse", "animal", "human" };
+
 			string? restart = "yes";
 
 			while (restart == "yes")
 			{
 				Random random = new Random();
+				int randomWordIndex = random.Next(words.Length);
+				string word = words[randomWordIndex];
+				string health = "*****";
 
-				int targetNumber = random.Next(1, 101);
-				int attempts = 0;
+				string sketch = new string('-', word.Length);
 
-				while (true)
+				Console.WriteLine(word);
+
+
+				char[] wordToCharArray = word.ToCharArray();
+				char[] sketchToCharArray = sketch.ToCharArray();
+
+				while (sketch != word)
 				{
-					int guess = GetNumber("Enter your guess: ");
-					attempts++;
-
-					if (guess > targetNumber)
+					Console.Clear();
+					Console.WriteLine("Welcome to \"Hang Man\"! The rules are simple: guess the word within 5 attemtps.\n");
+					Console.WriteLine(sketch);
+					Console.WriteLine($"Health: {health}");
+					if (health.Length == 0)
 					{
-						Console.WriteLine($"Attempt {attempts}: Too high!");
+						Console.WriteLine($"Game over! The correct word was: {word}");
+						break;
 					}
-					else if (guess < targetNumber)
+
+					char userInput = GetChar("Please enter a letter: ");
+					if (word.Contains(userInput))
 					{
-						Console.WriteLine($"Attempt {attempts}: Too low!");
+						for (int i = 0; i < wordToCharArray.Length; i++)
+						{
+							if (wordToCharArray[i] == userInput && sketchToCharArray[i] == '-')
+								sketchToCharArray[i] = userInput;
+						}
 					}
 					else
 					{
-						Console.WriteLine($"Attempt {attempts}: Congratulations! You guessed the number!");
-						break;
+						health = health.Remove(health.Length - 1, 1);
 					}
+					Console.Clear();
+					sketch = new string(sketchToCharArray);
+					Console.WriteLine(sketch);
+					Console.WriteLine($"Health: {health}");
+					Console.WriteLine($"Congratulations! You guessed the word: {word}");
 				}
 				Console.WriteLine("\nDo you want restart? (write \"yes\" to restart. Press any key to leave.)");
 				restart = Console.ReadLine();
-				Console.Clear();
 			}
 
-			int GetNumber(string prompt)
+			char GetChar(string prompt)
 			{
 				while (true)
 				{
 					Console.Write(prompt);
-					if (int.TryParse(Console.ReadLine(), out int number))
-						return number;
-					Console.WriteLine("Invalid Number. Please enter a valid number.");
+					if (char.TryParse(Console.ReadLine(), out char test))
+						return test;
+					Console.WriteLine("invalid character");
 				}
 			}
 		}
