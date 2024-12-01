@@ -4,13 +4,15 @@ namespace ATM
 {
 	internal class ATM
 	{
+
+
 		static void Main(string[] Args)
 		{
-			int DescendingOrder(int num)
+			Console.WriteLine(NoSpace("asdasd  asd asd"));
+			string NoSpace(string input)
 			{
-				return 22;
+				return input.Replace(" ", "");
 			}
-			DescendingOrder(23);
 		}
 	}
 }
