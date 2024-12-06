@@ -4,22 +4,16 @@
 	{
 		static void Main(string[] Args)
 		{
-			static double SumArray(double[] array)
+			static int binaryArrayToNumber(int[] BinaryArray)
 			{
-				//double sum = 0;
-
-				//foreach (double num in array)
-				//{
-				//	sum += num;
-				//}
-
-				return array.Sum();
-
-				//return sum;
+				string result = "";
+				foreach (int i in BinaryArray)
+				{
+					result += i;
+				}
+				return int.Parse(result);
 			}
-
-			Console.WriteLine(SumArray([1, 3, 4]));
-
+			binaryArrayToNumber([1, 2, 3]);
 		}
 	}
 }
