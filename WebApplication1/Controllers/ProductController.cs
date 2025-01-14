@@ -28,6 +28,13 @@ namespace WebApplication1.Controllers
 			return await _productService.Get();
 		}
 
+		[HttpDelete]
+		public async Task<bool> DeleteProduct(int id)
+		{
+			return await _productService.DeleteProduct(id);
+		}
+
+
 		[HttpGet]
 		[Route("api/[controller]/{id}")]
 		public async Task<Product> GetProductById(int id)
