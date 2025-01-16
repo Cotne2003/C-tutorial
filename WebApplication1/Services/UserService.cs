@@ -1,4 +1,5 @@
-﻿using WebApplication1.Data;
+﻿using Microsoft.EntityFrameworkCore;
+using WebApplication1.Data;
 using WebApplication1.Data.Entities;
 
 namespace WebApplication1.Services
@@ -12,20 +13,27 @@ namespace WebApplication1.Services
 			_context = context;
 		}
 
-		public async Task<List<User>> Get()
+		public async Task<List<User>> GetAllUser()
 		{
-			return  _context.Users.ToList();
+			return  await _context.Users.ToListAsync();
 		}
 
-		public async Task<bool> Post(User user)
+		public async Task<bool> CreateUser(User newUser)
 		{
-			var newUser = new User()
+			try
 			{
-				FirstName = user.FirstName,
-			};
+				var userToCreate = new User()
+				{
+					FirstName = newUser.FirstName
+				};
+				await _context.AddAsync(userToCreate);
+				await _context.SaveChangesAsync();
+			}
+			catch (Exception ex)
+			{
+				return false;
+			}
 
-			await _context.Users.AddAsync(newUser);
-			await _context.SaveChangesAsync();
 			return true;
 		}
 	}

@@ -14,36 +14,21 @@ namespace WebApplication1.Services
 			_context = context;
 		}
 
-		public async Task<bool> Create(Product request)
+		public async Task<List<Product>> GetAllProducts()
 		{
-			var product = new Product
-			{
-				Name = request.Name,
-				Price = request.Price
-			};
-
-			await _context.Products.AddAsync(product);
-			await _context.SaveChangesAsync();
-
-			return true;
+			return await _context.Products.ToListAsync();
 		}
 
-		public async Task<List<Product>> Get()
-		{
-			return _context.Products.ToList();
-		}
-		public async Task<Product> GetById(int id)
-		{
-
-			return await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
-		}
-
-		public async Task<bool> DeleteProduct(int id)
+		public async Task<bool> CreateProduct(Product newProduct)
 		{
 			try
 			{
-				var productForDelete = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
-				_context.Products.Remove(productForDelete);
+				var productToCreate = new Product()
+				{
+					Name = newProduct.Name,
+					Price = newProduct.Price
+				};
+				await _context.AddAsync(productToCreate);
 				await _context.SaveChangesAsync();
 			}
 			catch (Exception ex)

@@ -4,6 +4,6 @@
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
-        public Order[] orders { get; set; }
+        public List<Order>? orders { get; set; }
     }
 }

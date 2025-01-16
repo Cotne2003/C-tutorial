@@ -16,30 +16,16 @@ namespace WebApplication1.Controllers
 			_productService = productService;
 		}
 
+		[HttpGet]
+		public async Task<List<Product>> Get()
+		{
+			return await _productService.GetAllProducts();
+		}
+
 		[HttpPost]
-		public async Task<bool> CreateProduct(Product data)
+		public async Task<bool> CreateProduct(Product newProduct)
 		{
-			return await _productService.Create(data);
-		}
-
-		[HttpGet]
-		public async Task<List<Product>> GetProducts()
-		{
-			return await _productService.Get();
-		}
-
-		[HttpDelete]
-		public async Task<bool> DeleteProduct(int id)
-		{
-			return await _productService.DeleteProduct(id);
-		}
-
-
-		[HttpGet]
-		[Route("api/[controller]/{id}")]
-		public async Task<Product> GetProductById(int id)
-		{
-			return await _productService.GetById(id);
+			return await _productService.CreateProduct(newProduct);
 		}
 	}
 }

@@ -17,14 +17,15 @@ namespace WebApplication1.Controllers
 		}
 
 		[HttpGet]
-		public async Task<List<User>> Get()
+		public async Task<List<User>> GetUsers()
 		{
-			return await _UserService.Get();
+			return await _UserService.GetAllUser();
 		}
+
 		[HttpPost]
-		public async Task<bool> Post(User newUser)
+		public async Task<bool> CreateUser(User newUser)
 		{
-			return await _UserService.Post(newUser);
+			return await _UserService.CreateUser(newUser);
 		}
 	}
 }

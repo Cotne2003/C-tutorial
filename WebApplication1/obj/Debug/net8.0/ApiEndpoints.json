@@ -99,27 +99,7 @@
   },
   {
     "ContainingType": "WebApplication1.Controllers.UserController",
-    "Method": "Get",
-    "RelativePath": "api/User",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
-      {
-        "Type": "System.Collections.Generic.List\u00601[[WebApplication1.Data.Entities.User, WebApplication1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "WebApplication1.Controllers.UserController",
-    "Method": "Post",
+    "Method": "CreateUser",
     "RelativePath": "api/User",
     "HttpMethod": "POST",
     "IsController": true,
