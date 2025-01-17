@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
 using WebApplication1.Data;
+using WebApplication1.Data.DTOS;
 using WebApplication1.Services;
 
 namespace WebApplication1
@@ -13,11 +14,17 @@ namespace WebApplication1
 
 			// Add services to the container.
 
-			builder.Services.AddControllers();
+			builder.Services.AddControllers()
+				.AddJsonOptions(options =>
+				{
+					options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.Preserve;
+				});
 
 			builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 			builder.Services.AddScoped<ProductService>();
 			builder.Services.AddScoped<UserService>();
+			builder.Services.AddScoped<OrderCreateDTO>();
+			builder.Services.AddScoped<OrderService>();
 			// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 			builder.Services.AddEndpointsApiExplorer();
 			builder.Services.AddSwaggerGen();
