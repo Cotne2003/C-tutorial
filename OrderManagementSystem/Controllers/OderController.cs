@@ -17,7 +17,7 @@ namespace OrderManagementSystem.Controllers
             _orderService = orderService;
         }
 
-        [HttpGet("ById")]
+        [HttpGet("Id")]
         public async Task<Order> GetById(int id)
         {
             return await _orderService.GetOrderById(id);
@@ -35,15 +35,12 @@ namespace OrderManagementSystem.Controllers
             return await _orderService.UpdateOrder(orderUpdateDTO);
         }
 
-        [HttpDelete]
-        public async Task<bool> Delete(int id)
-        {
-            return await _orderService.DeleteOrder(id);
-        }
         [HttpGet]
-        public async Task<List<Order>> GetAllOrders()
+        public async Task<List<Order>> GetAll(int userId)
         {
-            return await _orderService.GetAllOrders();
+            return await _orderService.GetAllOrders(userId);
         }
+
+
     }
 }

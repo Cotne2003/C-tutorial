@@ -7,7 +7,7 @@ namespace OrderManagementSystem.Interfaces
     {
         Task<bool> CreateOrder(OrderCreateDTO orderCreateDTO);
         Task<bool> UpdateOrder(OrderUpdateDTO orderCreateDTO);
-        Task<List<Order>> GetAllOrders();
+        Task<List<Order>> GetAllOrders(int userId);
         Task<Order> GetOrderById(int id);
         Task<bool> DeleteOrder(int id);
     }

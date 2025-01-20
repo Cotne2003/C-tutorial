@@ -53,28 +53,30 @@ namespace OrderManagementSystem.Services
 
         public async Task<bool> DeleteOrder(int id)
         {
-            try
-            {
-                Order OrderForDelete = await _context.Orders.FirstOrDefaultAsync(x => x.Id == id);
-                _context.Orders.Remove(OrderForDelete);
-                await _context.SaveChangesAsync();
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
-        }
+			try
+			{
+				Order OrderForDelete = await _context.Orders.FirstOrDefaultAsync(x => x.Id == id);
+				_context.Orders.Remove(OrderForDelete);
+				await _context.SaveChangesAsync();
+				return true;
+			}
+			catch
+			{
+				return false;
+			}
+		}
 
-        public async Task<List<Order>> GetAllOrders()
+        public async Task<List<Order>> GetAllOrders(int userId)
         {
+            var userOrders = new List<Order>();
             try
             {
-                return await _context.Orders.Include(x => x.Products).Include(x => x.User).ToListAsync();
+                userOrders = await _context.Orders.Include(x => x.User).Include(x => x.Products).Where(x => x.User.Id == userId).ToListAsync();
+                return userOrders;
             }
-            catch
+            catch (Exception)
             {
-                throw new Exception("something wrong :(");
+                return userOrders;
             }
         }
 
@@ -84,9 +86,17 @@ namespace OrderManagementSystem.Services
             return order;
         }
 
-        public Task<bool> UpdateOrder(OrderUpdateDTO orderCreateDTO)
+        public async Task<bool> UpdateOrder(OrderUpdateDTO orderCreateDTO)
         {
-            throw new NotImplementedException();
+            Order OrderToUpdate = await _context.Orders.FirstOrDefaultAsync(x => x.Id == orderCreateDTO.Id);
+            if (OrderToUpdate != null)
+            {
+                OrderToUpdate.Products = orderCreateDTO.ProductIds;
+                _context.Update(OrderToUpdate);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            return false;
         }
     }
 }

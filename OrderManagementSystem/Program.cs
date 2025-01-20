@@ -24,6 +24,7 @@ namespace OrderManagementSystem
             builder.Services.AddScoped<ProductService>();
             builder.Services.AddScoped<AuthService>();
             builder.Services.AddScoped<IOrderService,OrderService>();
+            builder.Services.AddScoped<IUserService,UserService>();
 
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
