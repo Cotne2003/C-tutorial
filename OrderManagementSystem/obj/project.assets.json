@@ -5156,11 +5156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\OrderManagementSystem\\OrderManagementSystem\\OrderManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\OrderManagementSystem\\OrderManagementSystem.csproj",
       "projectName": "OrderManagementSystem",
-      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\OrderManagementSystem\\OrderManagementSystem\\OrderManagementSystem.csproj",
+      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\OrderManagementSystem\\OrderManagementSystem.csproj",
       "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\OrderManagementSystem\\OrderManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\OrderManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",

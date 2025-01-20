@@ -58,12 +58,12 @@ namespace OrderManagementSystem.Services
                 Order OrderForDelete = await _context.Orders.FirstOrDefaultAsync(x => x.Id == id);
                 _context.Orders.Remove(OrderForDelete);
                 await _context.SaveChangesAsync();
+                return true;
             }
             catch
             {
                 return false;
             }
-            return true;
         }
 
         public async Task<List<Order>> GetAllOrders()
