@@ -53,17 +53,57 @@ namespace OrderManagementSystem.Services
 
         public async Task<bool> DeleteOrder(int id)
         {
-			try
-			{
-				Order OrderForDelete = await _context.Orders.FirstOrDefaultAsync(x => x.Id == id);
-				_context.Orders.Remove(OrderForDelete);
-				await _context.SaveChangesAsync();
-				return true;
-			}
-			catch
-			{
-				return false;
-			}
+            // eager loading, lazy loading
+            try
+            {
+                //var groupedOrders = _context.Orders.Include(x => x.User).Include(x => x.Products)
+                //    .GroupBy(x => x.User.Id)
+                //    .Select(g => new
+                //    {
+                //        UserId = g.Key,
+                //        TotalOrders = g.Count(),
+                //        TotalAmount = g.Sum(o => o.Products.Sum(x => x.Price))
+                //    });
+                var orderToDelete = await _context.Orders.FirstOrDefaultAsync(x => x.Id == id);
+                if (orderToDelete is null)
+                    return false;
+
+                _context.Orders.Remove(orderToDelete);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                return false;       
+            }
+
+            return true;
+        }
+
+        public async Task<int> GetTotalOrders(int userId)
+        {
+            try
+            {
+                var UserOrders = await _context.Orders.Include(o => o.User).FirstOrDefaultAsync(o => o.User.Id == userId);
+                return UserOrders.User.Orders.Count();
+            }
+            catch
+            {
+                throw new Exception("Something went wrong!");
+            }
+        }
+
+        public async Task<decimal> GetTotalAmount(int id)
+        {
+            var UserOrders = await _context.Orders.Include(o => o.User).FirstOrDefaultAsync(o => o.User.Id == id);
+            var TotalAmount = UserOrders.User.Orders.Sum(o => o.Products.Sum(x => x.Price));
+            return TotalAmount;
+        }
+
+        public async Task<decimal> GetAverageAmount(int id)
+        {
+			var UserOrders = await _context.Orders.Include(o => o.User).FirstOrDefaultAsync(o => o.User.Id == id);
+            var AverageAmount = (UserOrders.User.Orders.Sum(o => o.Products.Sum(x => x.Price))) / (UserOrders.User.Orders.Count());
+            return AverageAmount;
 		}
 
         public async Task<List<Order>> GetAllOrders(int userId)
@@ -82,21 +122,35 @@ namespace OrderManagementSystem.Services
 
         public async Task<Order> GetOrderById(int id)
         {
-            var order = await _context.Orders.Include(x => x.User).Include(x => x.Products).FirstOrDefaultAsync(x => x.Id == id);
+            var order = await _context
+                .Orders
+                .Include(x => x.User)
+                .Include(x => x.Products)
+                .FirstOrDefaultAsync(x => x.Id == id);
             return order;
         }
 
-        public async Task<bool> UpdateOrder(OrderUpdateDTO orderCreateDTO)
+        public async Task<bool> UpdateOrder(OrderUpdateDTO orderUpdateDTO)
         {
-            Order OrderToUpdate = await _context.Orders.FirstOrDefaultAsync(x => x.Id == orderCreateDTO.Id);
-            if (OrderToUpdate != null)
+            var existingOrder = await _context.Orders.Include(x => x.Products).FirstOrDefaultAsync(x => x.Id == orderUpdateDTO.Id);
+            if (existingOrder is null)
+                return false;
+
+            var products = new List<Product>();
+
+            foreach (var id in orderUpdateDTO.ProductIds)
             {
-                OrderToUpdate.Products = orderCreateDTO.ProductIds;
-                _context.Update(OrderToUpdate);
-                await _context.SaveChangesAsync();
-                return true;
+                var product = await _context.Products.FirstOrDefaultAsync(x => x.Id == id);
+                if(product != null) 
+                    products.Add(product);
             }
-            return false;
+
+            existingOrder.Products = products;
+
+            _context.Orders.Update(existingOrder);
+            await _context.SaveChangesAsync();
+
+            return true;
         }
     }
 }

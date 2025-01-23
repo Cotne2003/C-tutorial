@@ -3,7 +3,7 @@
     public class Order : BaseClass
     {
         public int Id { get; set; }
-        public List<int> Products { get; set; } = new List<int>();
+        public List<Product> Products { get; set; } = new List<Product>();
         public User User { get; set; }
     }
 }

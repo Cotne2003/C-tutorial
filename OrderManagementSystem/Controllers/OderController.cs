@@ -41,6 +41,12 @@ namespace OrderManagementSystem.Controllers
             return await _orderService.GetAllOrders(userId);
         }
 
+        [HttpDelete]
+        public async Task<bool> Delete(int id)
+        {
+            return await _orderService.DeleteOrder(id);
+        }
+
 
     }
 }
