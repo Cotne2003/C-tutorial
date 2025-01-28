@@ -1,0 +1,14 @@
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\AppForTesting.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\AppForTesting.AssemblyInfoInputs.cache
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\AppForTesting.AssemblyInfo.cs
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\AppForTesting.csproj.CoreCompileInputs.cache
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\bin\Debug\net8.0\AppForTesting.exe
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\bin\Debug\net8.0\AppForTesting.deps.json
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\bin\Debug\net8.0\AppForTesting.runtimeconfig.json
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\bin\Debug\net8.0\AppForTesting.dll
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\bin\Debug\net8.0\AppForTesting.pdb
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\AppForTesting.dll
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\refint\AppForTesting.dll
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\AppForTesting.pdb
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\AppForTesting.genruntimeconfig.cache
+C:\Users\Tsotne\OneDrive\Desktop\AppForTesting\AppForTesting\obj\Debug\net8.0\ref\AppForTesting.dll
