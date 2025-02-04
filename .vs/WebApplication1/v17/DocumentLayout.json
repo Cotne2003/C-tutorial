@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\classwork\\services\\registerproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|solutionrelative:classwork\\services\\registerproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA7499C9-AC3D-4CDF-A800-70F2CA51EA9E}|WebApplication1\\WebApplication1.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\webapplication1\\migrations\\20250116133309_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA7499C9-AC3D-4CDF-A800-70F2CA51EA9E}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\migrations\\20250116133309_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\classwork\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|solutionrelative:classwork\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA7499C9-AC3D-4CDF-A800-70F2CA51EA9E}|WebApplication1\\WebApplication1.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\webapplication1\\migrations\\20250114115820_initialmigration.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA7499C9-AC3D-4CDF-A800-70F2CA51EA9E}|WebApplication1\\WebApplication1.csproj|solutionrelative:webapplication1\\migrations\\20250114115820_initialmigration.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\classwork\\services\\registeruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|solutionrelative:classwork\\services\\registeruser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\classwork\\interfaces\\iregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9CF31505-743A-4371-ABD9-FB073650BC06}|ClassWork\\ClassWork.csproj|solutionrelative:classwork\\interfaces\\iregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:ClassWork\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,63 +22,48 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Program.cs",
-              "RelativeDocumentMoniker": "ClassWork\\Program.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Program.cs",
-              "RelativeToolTip": "ClassWork\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T15:01:20.336Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IRegister.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Interfaces\\IRegister.cs",
-              "RelativeDocumentMoniker": "ClassWork\\Interfaces\\IRegister.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Interfaces\\IRegister.cs",
-              "RelativeToolTip": "ClassWork\\Interfaces\\IRegister.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAACAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "20250116133309_initialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\WebApplication1\\Migrations\\20250116133309_initialMigration.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Migrations\\20250116133309_initialMigration.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\WebApplication1\\Migrations\\20250116133309_initialMigration.cs",
+              "RelativeToolTip": "WebApplication1\\Migrations\\20250116133309_initialMigration.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAASwF4AAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T15:00:21.405Z",
+              "WhenOpened": "2025-02-04T17:06:03.617Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RegisterProduct.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Services\\RegisterProduct.cs",
-              "RelativeDocumentMoniker": "ClassWork\\Services\\RegisterProduct.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Services\\RegisterProduct.cs",
-              "RelativeToolTip": "ClassWork\\Services\\RegisterProduct.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "20250114115820_initialMigration.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\WebApplication1\\Migrations\\20250114115820_initialMigration.Designer.cs",
+              "RelativeDocumentMoniker": "WebApplication1\\Migrations\\20250114115820_initialMigration.Designer.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\WebApplication1\\Migrations\\20250114115820_initialMigration.Designer.cs",
+              "RelativeToolTip": "WebApplication1\\Migrations\\20250114115820_initialMigration.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:59:54.569Z",
+              "WhenOpened": "2025-02-04T17:06:00.805Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "RegisterUser.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Services\\RegisterUser.cs",
-              "RelativeDocumentMoniker": "ClassWork\\Services\\RegisterUser.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Services\\RegisterUser.cs",
-              "RelativeToolTip": "ClassWork\\Services\\RegisterUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Program.cs",
+              "RelativeDocumentMoniker": "ClassWork\\Program.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ClassWork\\Program.cs",
+              "RelativeToolTip": "ClassWork\\Program.cs",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T14:59:32.362Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-30T15:01:20.336Z"
             }
           ]
         }
