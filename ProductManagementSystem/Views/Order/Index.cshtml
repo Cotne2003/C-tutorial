@@ -1,0 +1,39 @@
+﻿@using ProductManagementSystem.Models.Entites
+@model List<ProductManagementSystem.Models.Entites.Order>
+
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<h1>Orders</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Order Id</th>
+            <th>Products</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var Order in Model)
+        {
+            <tr>
+                <td>@Order.Id</td>
+                <td>
+                    @foreach (var orderProduct in Order.Products)
+                    {
+                        <div>@orderProduct.Name</div>
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit","Order", new{id = Order.Id})" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete","Order", new{id = Order.Id})" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="@Url.Action("Create","Order")" class="btn btn-success">Create new order</a>

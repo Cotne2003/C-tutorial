@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using ProductManagementSystem.Models;
+using ProductManagementSystem.Services;
 
 namespace ProductManagementSystem
 {
@@ -10,6 +11,8 @@ namespace ProductManagementSystem
             var builder = WebApplication.CreateBuilder(args);
             
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddScoped<OrderService>();
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
