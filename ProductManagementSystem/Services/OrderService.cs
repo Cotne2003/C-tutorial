@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ProductManagementSystem.Interfaces;
 using ProductManagementSystem.Models;
 using ProductManagementSystem.Models.Entites;
 using ProductManagementSystem.Models.VM;
 
 namespace ProductManagementSystem.Services
 {
-    public class OrderService
+    public class OrderService : IOrderService
     {
         private readonly ApplicationDbContext _context;
 
@@ -38,6 +39,16 @@ namespace ProductManagementSystem.Services
 
             _context.Orders.Remove(oderToDelete);
             await _context.SaveChangesAsync();
+        }
+
+        public Task<List<Order>> GetOrdersAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateOrderAsync(int orderId, OrderViewModel orderViewModel)
+        {
+            throw new NotImplementedException();
         }
     }
 }

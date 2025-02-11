@@ -32,5 +32,15 @@ namespace ProductManagementSystem.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction ("index");
         }
+
+        public IActionResult Update()
+        {
+            return View();
+        }
+
+        public IActionResult Delete()
+        {
+            return View();
+        }
     }
 }
