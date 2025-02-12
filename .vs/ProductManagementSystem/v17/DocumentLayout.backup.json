@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\views\\order\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,36 +18,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Product\\Index.cshtml",
-              "RelativeDocumentMoniker": "ProductManagementSystem\\Views\\Product\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Product\\Index.cshtml",
-              "RelativeToolTip": "ProductManagementSystem\\Views\\Product\\Index.cshtml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-06T14:48:24.951Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "ProductManagementSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Program.cs",
-              "RelativeToolTip": "ProductManagementSystem\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABKAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "ProductManagementSystem\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "ProductManagementSystem\\Controllers\\OrderController.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAYwDsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T01:38:27.558Z",
+              "WhenOpened": "2025-02-12T11:49:49.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Order\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ProductManagementSystem\\Views\\Order\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Order\\Edit.cshtml",
+              "RelativeToolTip": "ProductManagementSystem\\Views\\Order\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-12T11:49:38.603Z",
               "EditorCaption": ""
             }
           ]

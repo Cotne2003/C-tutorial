@@ -52,7 +52,6 @@ namespace ProductManagementSystem.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpGet("Order/Edit/{id}")]
         public async Task<IActionResult> Update(int id)
         {
             ViewBag.Products = await _context.Products.ToListAsync();
@@ -60,10 +59,12 @@ namespace ProductManagementSystem.Controllers
             return View(order);
         }
 
-        [HttpPost("Order/Edit/{id}")]
+        [HttpPost]
         public async Task<IActionResult> UpdateConfirmed(int id, int[] ProductsIds)
         {
             var orderToUpdate = await _context.Orders.Include(x => x.Products).FirstOrDefaultAsync(x => x.Id == id);
+            if (orderToUpdate is null)
+                return NotFound();
             orderToUpdate.Products.Clear();
             var selectedProducts = await _context.Products.Where(p => ProductsIds.Contains(p.Id)).ToListAsync();
 

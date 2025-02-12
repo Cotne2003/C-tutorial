@@ -12,8 +12,8 @@ using ProductManagementSystem.Models;
 namespace ProductManagementSystem.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250211171630_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20250212115301_initialMigration")]
+    partial class initialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
