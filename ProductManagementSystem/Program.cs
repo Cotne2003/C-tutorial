@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ProductManagementSystem.Interfaces;
 using ProductManagementSystem.Models;
+using ProductManagementSystem.Models.Entites;
 using ProductManagementSystem.Services;
 
 namespace ProductManagementSystem
@@ -17,6 +18,8 @@ namespace ProductManagementSystem
 
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            //builder.Services.AddDefaultIdentinty<ApplicationUser>(options => options)
 
             var app = builder.Build();
 

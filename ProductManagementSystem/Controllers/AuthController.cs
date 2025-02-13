@@ -1,0 +1,53 @@
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using ProductManagementSystem.Models.Entites;
+using ProductManagementSystem.Models.VM;
+
+namespace ProductManagementSystem.Controllers
+{
+    public class AuthController : Controller
+    {
+
+        // usermanage, signinmanager
+
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public AuthController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
+        {
+            _signInManager = signInManager;
+            _userManager = userManager;
+        }
+
+        public async Task<IActionResult> Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel  model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                };
+
+                var result = await _userManager.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await _signInManager.SignInAsync(user, isPersistent: false);
+                    return RedirectToAction("Index", "Home");
+                }
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError(string.Empty, error.Description);
+                }
+            }
+            return View(model);
+        }
+    }
+}
