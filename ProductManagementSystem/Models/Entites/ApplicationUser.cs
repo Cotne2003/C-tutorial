@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using System.Security.Cryptography.X509Certificates;
 
 namespace ProductManagementSystem.Models.Entites
 {

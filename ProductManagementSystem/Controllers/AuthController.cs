@@ -1,14 +1,17 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using ProductManagementSystem.Models.Entites;
-using ProductManagementSystem.Models.VM;
+using ProductManagementSystem.Models.VM.Auth;
 
 namespace ProductManagementSystem.Controllers
 {
     public class AuthController : Controller
     {
+        // register get, post
+        // login get, post
+        // logout, post
 
-        // usermanage, signinmanager
+        // usermanager, signinmanager
 
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
@@ -23,10 +26,11 @@ namespace ProductManagementSystem.Controllers
         {
             return View();
         }
+
         [HttpPost]
-        public async Task<IActionResult> Register(RegisterViewModel  model)
+        public async Task<IActionResult> Register(RegisterViewModel model)
         {
-            if (ModelState.IsValid)
+            if (ModelState.IsValid) 
             {
                 var user = new ApplicationUser
                 {
@@ -37,6 +41,7 @@ namespace ProductManagementSystem.Controllers
                 };
 
                 var result = await _userManager.CreateAsync(user, model.Password);
+
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
@@ -45,6 +50,14 @@ namespace ProductManagementSystem.Controllers
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
+                }   
+            }
+            else
+            {
+                Console.WriteLine("Model is invalid!"); // Debugging output
+                foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+                {
+                    Console.WriteLine($"Validation Error: {error.ErrorMessage}");
                 }
             }
             return View(model);

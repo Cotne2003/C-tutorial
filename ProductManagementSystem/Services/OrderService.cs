@@ -2,7 +2,7 @@
 using ProductManagementSystem.Interfaces;
 using ProductManagementSystem.Models;
 using ProductManagementSystem.Models.Entites;
-using ProductManagementSystem.Models.VM;
+using ProductManagementSystem.Models.VM.Order;
 
 namespace ProductManagementSystem.Services
 {
@@ -46,9 +46,22 @@ namespace ProductManagementSystem.Services
             throw new NotImplementedException();
         }
 
-        public Task UpdateOrderAsync(int orderId, OrderViewModel orderViewModel)
+        public async Task UpdateOrderAsync(int orderId, OrderViewModel orderViewModel)
         {
-            throw new NotImplementedException();
+            var order = await _context.Orders.Include(x => x.Products).FirstOrDefaultAsync(x => x.Id == orderId);
+
+            var products = new List<Product>();
+
+            foreach (var producId in orderViewModel.ProductIds)
+            {
+                var product = await _context.Products.FirstOrDefaultAsync(x => x.Id == producId);
+                if(product != null)
+                    products.Add(product);
+            }
+
+            order.Products = products;
+            _context.Orders.Update(order);
+            await _context.SaveChangesAsync();
         }
     }
 }

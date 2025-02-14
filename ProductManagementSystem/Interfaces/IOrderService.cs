@@ -1,5 +1,5 @@
 ﻿using ProductManagementSystem.Models.Entites;
-using ProductManagementSystem.Models.VM;
+using ProductManagementSystem.Models.VM.Order;
 
 namespace ProductManagementSystem.Interfaces
 {
