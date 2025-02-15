@@ -62,5 +62,10 @@ namespace ProductManagementSystem.Controllers
             }
             return View(model);
         }
+
+        public async Task<IActionResult> Login()
+        {
+            return View();
+        }
     }
 }
