@@ -25,6 +25,12 @@ namespace ProductManagementSystem
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Auth/Login";
+                options.LogoutPath = "/Auth/Logout";
+            });
+
             var app = builder.Build();
 
             if (!app.Environment.IsDevelopment())
@@ -39,6 +45,8 @@ namespace ProductManagementSystem
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.MapControllerRoute(
                 name: "default",
