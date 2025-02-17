@@ -15,7 +15,6 @@ namespace ProductManagementSystem.Controllers
 
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly UserManager<ApplicationUser> _userManager;
-        //private readonly ILogger<LogoutModel> _logger;
 
         public AuthController(SignInManager<ApplicationUser> signInManager, UserManager<ApplicationUser> userManager)
         {
@@ -23,7 +22,7 @@ namespace ProductManagementSystem.Controllers
             _userManager = userManager;
         }
 
-        public async Task<IActionResult> Register()
+        public IActionResult Register()
         {
             return View();
         }

@@ -3,30 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__ProjectModels/ProductManagementSystem/True/SqlTable/dbo.AspNetUsers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__ProjectModels/ProductManagementSystem/True/SqlTable/dbo.AspNetUserTokens.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\views\\auth\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\views\\auth\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\models\\vm\\auth\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\models\\vm\\auth\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -36,95 +14,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "dbo.AspNetUsers [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/ProductManagementSystem/True/SqlTable/dbo.AspNetUsers.sql",
-              "ToolTip": "dbo.AspNetUsers [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-16T17:06:23.043Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dbo.AspNetUserTokens [Data]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__ProjectModels/ProductManagementSystem/True/SqlTable/dbo.AspNetUserTokens.sql",
-              "ToolTip": "dbo.AspNetUserTokens [Data]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-02-16T17:06:14.466Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Program.cs",
-              "RelativeDocumentMoniker": "ProductManagementSystem\\Program.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Program.cs",
-              "RelativeToolTip": "ProductManagementSystem\\Program.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T16:40:26.5Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Auth\\Login.cshtml",
-              "RelativeDocumentMoniker": "ProductManagementSystem\\Views\\Auth\\Login.cshtml",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Auth\\Login.cshtml",
-              "RelativeToolTip": "ProductManagementSystem\\Views\\Auth\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T15:55:50.06Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Auth\\Register.cshtml",
-              "RelativeDocumentMoniker": "ProductManagementSystem\\Views\\Auth\\Register.cshtml",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Views\\Auth\\Register.cshtml",
-              "RelativeToolTip": "ProductManagementSystem\\Views\\Auth\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-15T15:55:03.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LoginViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Models\\VM\\Auth\\LoginViewModel.cs",
-              "RelativeDocumentMoniker": "ProductManagementSystem\\Models\\VM\\Auth\\LoginViewModel.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Models\\VM\\Auth\\LoginViewModel.cs",
-              "RelativeToolTip": "ProductManagementSystem\\Models\\VM\\Auth\\LoginViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAQAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:51:30.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ProductManagementSystem\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Controllers\\AuthController.cs",
               "RelativeToolTip": "ProductManagementSystem\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAqwGIAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwGQAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T15:33:39.175Z",
+              "WhenOpened": "2025-02-16T17:08:22.709Z",
               "EditorCaption": ""
             }
           ]
