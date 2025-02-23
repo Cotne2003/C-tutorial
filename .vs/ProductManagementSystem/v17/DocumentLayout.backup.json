@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\productmanagementsystem\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DA014192-CDF6-4CC9-96E6-F73203BB36E8}|ProductManagementSystem\\ProductManagementSystem.csproj|solutionrelative:productmanagementsystem\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,12 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,10 +28,27 @@
               "RelativeDocumentMoniker": "ProductManagementSystem\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Controllers\\AuthController.cs",
               "RelativeToolTip": "ProductManagementSystem\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAcwGQAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAcwGIAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T17:08:22.709Z",
+              "WhenOpened": "2025-02-23T18:43:02.322Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "RoleController.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Controllers\\RoleController.cs",
+              "RelativeDocumentMoniker": "ProductManagementSystem\\Controllers\\RoleController.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\Controllers\\RoleController.cs",
+              "RelativeToolTip": "ProductManagementSystem\\Controllers\\RoleController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-23T18:38:06.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             }
           ]
         }

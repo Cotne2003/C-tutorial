@@ -29,6 +29,7 @@ namespace ProductManagementSystem
             {
                 options.LoginPath = "/Auth/Login";
                 options.LogoutPath = "/Auth/Logout";
+                options.AccessDeniedPath = "/Auth/AccessDenied";
             });
 
             var app = builder.Build();
