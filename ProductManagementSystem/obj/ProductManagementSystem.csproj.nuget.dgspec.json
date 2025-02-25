@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\ProductManagementSystem.csproj": {}
+    "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\ProductManagementSystem.csproj": {
+    "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\ProductManagementSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem.csproj",
         "projectName": "ProductManagementSystem",
-        "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\ProductManagementSystem.csproj",
+        "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem.csproj",
         "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\obj\\",
+        "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -49,6 +49,10 @@
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.12, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[8.0.13, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",

@@ -26,6 +26,9 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="AdminOnly">Admin Only</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="Index">Products</a>
                         </li>
                         <li class="nav-item">
@@ -39,7 +42,7 @@
                         @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <span class="nav-link">Hello, @User.Identity.Name!</span>
+                                <span class="nav-link">Hello, @User.Identity.Name! </span>
                             </li>
                             <li class="nav-item">
                                 <form asp-controller="Auth" asp-action="Logout" method="post">

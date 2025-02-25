@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using ProductManagementSystem.Models;
 using System.Diagnostics;
@@ -27,6 +28,12 @@ namespace ProductManagementSystem.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        [Authorize(Roles = "Admin")]
+        public IActionResult AdminOnly()
+        {
+            return View();
         }
     }
 }

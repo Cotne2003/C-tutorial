@@ -12,7 +12,6 @@ namespace ProductManagementSystem.Models
         public DbSet<Order> Orders { get; set; }
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
-        public DbSet<Role> Roles { get; set; }
 
     }
 }

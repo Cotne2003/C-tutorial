@@ -4,15 +4,11 @@ namespace ProductManagementSystem.Models.VM.Auth
 {
     public class LoginViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "აუცილებელი ველი")]
         public string Email { get; set; }
 
-        [Required]
-        [DataType(DataType.Password)]
+        [Required(ErrorMessage = "აუცილებელი ველი")]
         public string Password { get; set; }
-
-        [Display(Name = "Remember Me")]
         public bool RememberMe { get; set; }
     }
 }

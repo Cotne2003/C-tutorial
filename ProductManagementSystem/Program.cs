@@ -20,15 +20,13 @@ namespace ProductManagementSystem
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+            //builder.Services.AddDefaultIdentity<ApplicationUser>().AddEntityFrameworkStores<ApplicationDbContext>();
 
             builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+                .AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
             builder.Services.ConfigureApplicationCookie(options =>
             {
-                options.LoginPath = "/Auth/Login";
-                options.LogoutPath = "/Auth/Logout";
                 options.AccessDeniedPath = "/Auth/AccessDenied";
             });
 
@@ -46,8 +44,6 @@ namespace ProductManagementSystem
             app.UseRouting();
 
             app.UseAuthorization();
-
-            app.UseAuthentication();
 
             app.MapControllerRoute(
                 name: "default",
