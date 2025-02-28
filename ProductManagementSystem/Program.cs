@@ -1,8 +1,11 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using ProductManagementSystem.Interfaces;
 using ProductManagementSystem.Models;
 using ProductManagementSystem.Models.Entites;
+using ProductManagementSystem.Policies.Handlers;
+using ProductManagementSystem.Policies.Requirements;
 using ProductManagementSystem.Services;
 
 namespace ProductManagementSystem
@@ -29,6 +32,17 @@ namespace ProductManagementSystem
             {
                 options.AccessDeniedPath = "/Auth/AccessDenied";
             });
+
+
+            builder.Services.AddAuthorization(options =>
+            {
+                options.AddPolicy("TestPolicy", policy => policy.RequireClaim("TestClaim"));
+                options.AddPolicy("FiveYearsEmployee", policy => policy.Requirements.Add(new FiveYearsRequirement(5)));
+                options.AddPolicy("TsotnesPolicy", policy => policy.Requirements.Add(new TsotnesPageRequirement("Tsotne")));
+            });
+
+            builder.Services.AddScoped<IAuthorizationHandler, FiveYearsHandler>();
+            builder.Services.AddScoped<IAuthorizationHandler, TsotnesPageHandler>();
 
             var app = builder.Build();
 

@@ -22,6 +22,7 @@ namespace ProductManagementSystem.Controllers
             return View(roles);
         }
 
+        [Authorize(Policy = "TestPolicy")]
         public async Task<IActionResult> Create()
         {
             return View();

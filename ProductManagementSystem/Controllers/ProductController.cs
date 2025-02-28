@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProductManagementSystem.Models;
 using ProductManagementSystem.Models.Entites;
 
 namespace ProductManagementSystem.Controllers
 {
+    [Authorize(Policy = "FiveYearsEmployee")]
     public class ProductController : Controller
     {
         private readonly ApplicationDbContext _context;

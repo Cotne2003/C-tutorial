@@ -4423,11 +4423,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem.csproj",
+      "projectUniqueName": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\ProductManagementSystem.csproj",
       "projectName": "ProductManagementSystem",
-      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\ProductManagementSystem.csproj",
+      "projectPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\ProductManagementSystem.csproj",
       "packagesPath": "C:\\Users\\Tsotne\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\ProductManagementSystem\\ProductManagementSystem\\obj\\",
+      "outputPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\ProductManagementSystem\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Tsotne\\AppData\\Roaming\\NuGet\\NuGet.Config",
