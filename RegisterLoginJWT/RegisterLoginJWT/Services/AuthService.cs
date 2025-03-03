@@ -2,6 +2,7 @@
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
 using RegisterLoginJWT.Models.DTOS;
+using RegisterLoginJWT.Models.Entities;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -26,11 +27,43 @@ namespace RegisterLoginJWT.Services
                 return response;
             }
 
+            CreatePasswordHash(dto.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
+            var user = new User
+            {
+                UserName = dto.UserName,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt
+            };
+
+            await _context.users.AddAsync(user);
+            await _context.SaveChangesAsync();
+            response.Data = user.Id;
+            return response;
         }
-        public Task<ServiceResponse<string>> Login(UserLoginDTO dto)
+        public async Task<ServiceResponse<string>> Login(UserLoginDTO dto)
         {
-            throw new NotImplementedException();
+            var response = new ServiceResponse<string>();
+            var user = await _context.users.FirstOrDefaultAsync(x => x.UserName.ToLower() == dto.UserName.ToLower());
+
+            if (user is null)
+            {
+                response.Success = false;
+                response.Message = "User not found";
+                return response;
+            }
+
+            if (!VerifyPasswordHash(dto.Password, user.PasswordHash, user.PasswordSalt))
+            {
+                response.Success = false;
+                response.Message = "User password is incorrect";
+                return response;
+            }
+
+            response.Data = user.UserName;
+            response.Message = "User logged in successfully";
+            return response;
+
         }
 
         #region PrivateMethods
@@ -43,10 +76,20 @@ namespace RegisterLoginJWT.Services
 
         private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
         {
-            using(var hmac = new HMACSHA3_512())
+            using(var hmac = new HMACSHA512())
             {
                 passwordSalt = hmac.Key;
                 passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+            }
+        }
+
+        private bool VerifyPasswordHash(string password, byte[] storedHash, byte[] storedSalt)
+        {
+            using (var hmac = new HMACSHA512(storedSalt))
+            {
+                var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                return computedHash.SequenceEqual(storedHash);
             }
         }
         #endregion

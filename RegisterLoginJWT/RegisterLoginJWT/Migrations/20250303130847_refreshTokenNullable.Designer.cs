@@ -12,8 +12,8 @@ using RegisterLoginJWT.Models;
 namespace RegisterLoginJWT.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250301180629_addBaseClassProperties")]
-    partial class addBaseClassProperties
+    [Migration("20250303130847_refreshTokenNullable")]
+    partial class refreshTokenNullable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,7 +54,6 @@ namespace RegisterLoginJWT.Migrations
                         .HasColumnType("varbinary(max)");
 
                     b.Property<string>("RefreshToken")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")

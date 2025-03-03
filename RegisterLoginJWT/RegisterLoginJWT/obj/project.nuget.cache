@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "O1lnBeG613s=",
+  "dgSpecHash": "de9wBP+/v7o=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RegisterLoginJWT\\RegisterLoginJWT\\RegisterLoginJWT.csproj",
+  "projectFilePath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\RegisterLoginJWT.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Tsotne\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Tsotne\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
