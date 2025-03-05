@@ -1,8 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
 using RegisterLoginJWT.Models.DTOS;
 using RegisterLoginJWT.Models.Entities;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 
@@ -11,10 +13,12 @@ namespace RegisterLoginJWT.Services
     public class AuthService : IAuthService
     {
         private readonly ApplicationDbContext _context;
+        private readonly IConfiguration _configuration;
 
-        public AuthService(ApplicationDbContext context)
+        public AuthService(ApplicationDbContext context, IConfiguration configuration)
         {
             _context = context;
+            _configuration = configuration;
         }
 
         public async Task<ServiceResponse<int>> Register(UserRegisterDTO dto)
@@ -91,6 +95,51 @@ namespace RegisterLoginJWT.Services
 
                 return computedHash.SequenceEqual(storedHash);
             }
+        }
+
+        private TokenDTO GenerateTokens(User user, bool staySignedIn)
+        {
+            return default;
+        }
+
+        private string GenerateAccessToken(User user)
+        {
+            //claims
+
+            List<Claim> claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.UserName)
+            };
+
+            // Key SymmetricSecurityKey
+
+            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("Token:Secret").Value ?? string.Empty));
+
+            // Credentials
+
+            SigningCredentials credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            // Desscriptor SecurityTokenDescriptor
+
+            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor()
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(double.Parse(_configuration.GetSection("JWTOptions:JwtOptions:AccessTokenExpirationDays").Value)),
+                SigningCredentials = credentials,
+                Issuer = _configuration.GetSection("JWTOptions:JwtOptions:Issuer").Value,
+                Audience = _configuration.GetSection("JWTOptions:JwtOptions:Audience").Value
+            };
+
+            // handler JwtSecurityTokenHandler
+
+            // SecurityToken
+            return default;
+        }
+
+        private string GenerateRefreshToken(User user)
+        {
+            return default;
         }
         #endregion
     }
