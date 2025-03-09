@@ -4,6 +4,7 @@ using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
 using RegisterLoginJWT.Models.DTOS;
 using RegisterLoginJWT.Models.Entities;
+using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
@@ -56,18 +57,27 @@ namespace RegisterLoginJWT.Services
                 response.Message = "User not found";
                 return response;
             }
-
-            if (!VerifyPasswordHash(dto.Password, user.PasswordHash, user.PasswordSalt))
+            else if (!VerifyPasswordHash(dto.Password, user.PasswordHash, user.PasswordSalt))
             {
                 response.Success = false;
                 response.Message = "User password is incorrect";
                 return response;
             }
+            else
+            {
+                var result = GenerateTokens(user, dto.StaySignedIn);
+                response.Data = result.Accesstoken;
+                response.Success = true;
 
-            response.Data = user.UserName;
-            response.Message = "User logged in successfully";
+            }
+
+            if (dto.StaySignedIn)
+            {
+                _context.users.Update(user);
+                await _context.SaveChangesAsync();
+            }
+
             return response;
-
         }
 
         #region PrivateMethods
@@ -99,10 +109,62 @@ namespace RegisterLoginJWT.Services
 
         private TokenDTO GenerateTokens(User user, bool staySignedIn)
         {
-            return default;
+            string refreshToken = string.Empty;
+
+            if (staySignedIn)
+            {
+                refreshToken = GenerateRefreshToken(user);
+                user.RefreshToken = refreshToken;
+                user.RefreshTokenExpirationDate = DateTime.Now.AddDays(2);
+            }
+            var accessToken = GenerateAccessToken(user);
+
+            return new TokenDTO { Accesstoken = accessToken, RefreshToken = refreshToken };
         }
 
         private string GenerateAccessToken(User user)
+        {
+            //claims
+
+            List<Claim> claims = new List<Claim>()
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Role, "Admin"),
+                new Claim(ClaimTypes.Role, "User")
+            };
+
+            // Key SymmetricSecurityKey
+
+            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWTOptions:Secret").Value ?? string.Empty));
+
+            // Credentials
+
+            SigningCredentials credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
+
+            // Desscriptor SecurityTokenDescriptor
+
+            SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor()
+            {
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.Now.AddDays(1),
+                SigningCredentials = credentials,
+                Issuer = _configuration.GetSection("JWTOptions:Issuer").Value,
+                Audience = _configuration.GetSection("JWTOptions:Audience").Value
+            };
+
+            // handler JwtSecurityTokenHandler
+
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
+
+            // SecurityToken
+
+            SecurityToken token = handler.CreateToken(tokenDescriptor);
+
+            return handler.WriteToken(token);
+        }
+
+        private string GenerateRefreshToken(User user)
         {
             //claims
 
@@ -114,7 +176,7 @@ namespace RegisterLoginJWT.Services
 
             // Key SymmetricSecurityKey
 
-            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("Token:Secret").Value ?? string.Empty));
+            SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWTOptions:Secret").Value ?? string.Empty));
 
             // Credentials
 
@@ -125,21 +187,21 @@ namespace RegisterLoginJWT.Services
             SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor()
             {
                 Subject = new ClaimsIdentity(claims),
-                Expires = DateTime.Now.AddDays(double.Parse(_configuration.GetSection("JWTOptions:JwtOptions:AccessTokenExpirationDays").Value)),
+                Expires = DateTime.Now.AddDays(2),
                 SigningCredentials = credentials,
-                Issuer = _configuration.GetSection("JWTOptions:JwtOptions:Issuer").Value,
-                Audience = _configuration.GetSection("JWTOptions:JwtOptions:Audience").Value
+                Issuer = _configuration.GetSection("JWTOptions:Issuer").Value,
+                Audience = _configuration.GetSection("JWTOptions:Audience").Value
             };
 
             // handler JwtSecurityTokenHandler
 
-            // SecurityToken
-            return default;
-        }
+            JwtSecurityTokenHandler handler = new JwtSecurityTokenHandler();
 
-        private string GenerateRefreshToken(User user)
-        {
-            return default;
+            // SecurityToken
+
+            SecurityToken token = handler.CreateToken(tokenDescriptor);
+
+            return handler.WriteToken(token);
         }
         #endregion
     }

@@ -287,3 +287,4 @@ C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\ob
 C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\obj\Debug\net8.0\RegisterLoginJWT.pdb
 C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\obj\Debug\net8.0\RegisterLoginJWT.genruntimeconfig.cache
 C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\obj\Debug\net8.0\ref\RegisterLoginJWT.dll
+C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll

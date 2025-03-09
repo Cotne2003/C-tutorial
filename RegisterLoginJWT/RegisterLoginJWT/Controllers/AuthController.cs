@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
@@ -27,6 +27,13 @@ namespace RegisterLoginJWT.Controllers
         public async Task<ServiceResponse<string>> Login(UserLoginDTO userLoginDTO)
         {
             return await _authService.Login(userLoginDTO);
+        }
+
+        [HttpGet]
+        [Authorize(Roles = "Admin")]
+        public async Task<ServiceResponse<string>> AdminRole()
+        {
+            return new ServiceResponse<string>() { Data = "Access granted" };
         }
     }
 }
