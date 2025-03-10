@@ -8,5 +8,6 @@
         public byte[] PasswordSalt { get; set; }
         public string? RefreshToken { get; set; }
         public DateTime? RefreshTokenExpirationDate { get; set; }
+        public List<Role> Roles { get; set; }
     }
 }

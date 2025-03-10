@@ -8,5 +8,6 @@ namespace RegisterLoginJWT.Models
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
             
         public DbSet<User> users { get; set; }
+        public DbSet<Role> roles { get; set; }
     }
 }

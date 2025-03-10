@@ -29,7 +29,7 @@
     "Parameters": [
       {
         "Name": "userLoginDTO",
-        "Type": "RegisterLoginJWT.Models.DTOS.UserLoginDTO",
+        "Type": "RegisterLoginJWT.Models.DTOS.Auth.UserLoginDTO",
         "IsRequired": true
       }
     ],
@@ -55,13 +55,39 @@
     "Parameters": [
       {
         "Name": "userRegisterDTO",
-        "Type": "RegisterLoginJWT.Models.DTOS.UserRegisterDTO",
+        "Type": "RegisterLoginJWT.Models.DTOS.Auth.UserRegisterDTO",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
         "Type": "RegisterLoginJWT.Models.ServiceResponse\u00601[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "RegisterLoginJWT.Controllers.RoleController",
+    "Method": "CreateAsync",
+    "RelativePath": "api/Role",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dto",
+        "Type": "RegisterLoginJWT.Models.DTOS.Role.RoleCreateDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RegisterLoginJWT.Models.ServiceResponse\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

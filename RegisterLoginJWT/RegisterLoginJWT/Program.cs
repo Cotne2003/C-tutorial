@@ -4,7 +4,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
-using RegisterLoginJWT.Models.DTOS;
+using RegisterLoginJWT.Models.DTOS.Auth;
 using RegisterLoginJWT.Services;
 using System.Text;
 
@@ -21,7 +21,33 @@ namespace RegisterLoginJWT
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "My Web api project", Version = "V1" });
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Name = "Authorization",
+                    Type = SecuritySchemeType.Http,
+                    Scheme = "Bearer",
+                    BearerFormat = "JWT",
+                    In = ParameterLocation.Header,
+                    Description = "Enter your bearer token here"
+                });
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        new string[] {}
+                    }
+                });
+            });
 
             JWTOptionsDTO jwtOptions = builder.Configuration.GetSection("JWTOptions").Get<JWTOptionsDTO>();
 
@@ -42,33 +68,8 @@ namespace RegisterLoginJWT
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtOptions.Secret))
                 };
             });
-            builder.Services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Your API", Version = "v1" });
 
-                c.AddSecurityDefinition("ApiKey", new OpenApiSecurityScheme
-                {
-                    Description = "It is the super secret key 123 !! $$ It is the super secret key 123 !! $$ It is the super secret key 123 !! $$ It is the super secret key 123 !! $$",
-                    Name = "Secret",
-                    In = ParameterLocation.Header,
-                    Type = SecuritySchemeType.ApiKey
-                });
-
-                c.AddSecurityRequirement(new OpenApiSecurityRequirement
-                {
-                    {
-                        new OpenApiSecurityScheme
-                        {
-                            Reference = new OpenApiReference
-                            {
-                                Type = ReferenceType.SecurityScheme,
-                                Id = "ApiKey"
-                            }
-                        },
-                        new string[] {}
-                    }
-                });
-            });
+            builder.Services.AddAutoMapper(typeof(Program));
 
             builder.Services.AddAuthorization();
 
@@ -76,6 +77,7 @@ namespace RegisterLoginJWT
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             builder.Services.AddScoped<IAuthService, AuthService>();
+            builder.Services.AddScoped<IRoleService, RoleService>();
 
             var app = builder.Build();
 

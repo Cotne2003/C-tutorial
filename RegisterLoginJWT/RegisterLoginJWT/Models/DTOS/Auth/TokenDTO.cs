@@ -1,4 +1,4 @@
-﻿namespace RegisterLoginJWT.Models.DTOS
+﻿namespace RegisterLoginJWT.Models.DTOS.Auth
 {
     public class TokenDTO
     {

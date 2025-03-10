@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
-using RegisterLoginJWT.Models.DTOS;
+using RegisterLoginJWT.Models.DTOS.Auth;
 
 namespace RegisterLoginJWT.Controllers
 {

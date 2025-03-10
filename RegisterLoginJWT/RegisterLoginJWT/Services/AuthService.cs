@@ -2,7 +2,7 @@
 using Microsoft.IdentityModel.Tokens;
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
-using RegisterLoginJWT.Models.DTOS;
+using RegisterLoginJWT.Models.DTOS.Auth;
 using RegisterLoginJWT.Models.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -129,9 +129,7 @@ namespace RegisterLoginJWT.Services
             List<Claim> claims = new List<Claim>()
             {
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
-                new Claim(ClaimTypes.Name, user.UserName),
-                new Claim(ClaimTypes.Role, "Admin"),
-                new Claim(ClaimTypes.Role, "User")
+                new Claim(ClaimTypes.Name, user.UserName)
             };
 
             // Key SymmetricSecurityKey

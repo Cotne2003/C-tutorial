@@ -1,5 +1,5 @@
 ﻿using RegisterLoginJWT.Models;
-using RegisterLoginJWT.Models.DTOS;
+using RegisterLoginJWT.Models.DTOS.Auth;
 
 namespace RegisterLoginJWT.Interfaces
 {
