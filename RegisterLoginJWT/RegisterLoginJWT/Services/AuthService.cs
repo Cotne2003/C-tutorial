@@ -34,7 +34,7 @@ namespace RegisterLoginJWT.Services
 
             CreatePasswordHash(dto.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
-            var user = new User
+            var user = new UserService
             {
                 UserName = dto.UserName,
                 PasswordHash = passwordHash,
@@ -107,7 +107,7 @@ namespace RegisterLoginJWT.Services
             }
         }
 
-        private TokenDTO GenerateTokens(User user, bool staySignedIn)
+        private TokenDTO GenerateTokens(UserService user, bool staySignedIn)
         {
             string refreshToken = string.Empty;
 
@@ -122,7 +122,7 @@ namespace RegisterLoginJWT.Services
             return new TokenDTO { Accesstoken = accessToken, RefreshToken = refreshToken };
         }
 
-        private string GenerateAccessToken(User user)
+        private string GenerateAccessToken(UserService user)
         {
             //claims
 
@@ -162,7 +162,7 @@ namespace RegisterLoginJWT.Services
             return handler.WriteToken(token);
         }
 
-        private string GenerateRefreshToken(User user)
+        private string GenerateRefreshToken(UserService user)
         {
             //claims
 
