@@ -34,7 +34,7 @@ namespace RegisterLoginJWT.Services
 
             CreatePasswordHash(dto.Password, out byte[] passwordHash, out byte[] passwordSalt);
 
-            var user = new UserService
+            var user = new User
             {
                 UserName = dto.UserName,
                 PasswordHash = passwordHash,
@@ -49,7 +49,10 @@ namespace RegisterLoginJWT.Services
         public async Task<ServiceResponse<string>> Login(UserLoginDTO dto)
         {
             var response = new ServiceResponse<string>();
-            var user = await _context.users.FirstOrDefaultAsync(x => x.UserName.ToLower() == dto.UserName.ToLower());
+
+            var user = await _context.users.Include(x => x.Roles).FirstOrDefaultAsync(x => x.UserName.ToLower() == dto.UserName.ToLower());
+
+            var roleNames = user.Roles.Select(x => x.Name).ToList();
 
             if (user is null)
             {
@@ -65,7 +68,7 @@ namespace RegisterLoginJWT.Services
             }
             else
             {
-                var result = GenerateTokens(user, dto.StaySignedIn);
+                var result = GenerateTokens(user, dto.StaySignedIn, roleNames);
                 response.Data = result.Accesstoken;
                 response.Success = true;
 
@@ -107,7 +110,7 @@ namespace RegisterLoginJWT.Services
             }
         }
 
-        private TokenDTO GenerateTokens(UserService user, bool staySignedIn)
+        private TokenDTO GenerateTokens(User user, bool staySignedIn, List<string>? roleNames)
         {
             string refreshToken = string.Empty;
 
@@ -117,12 +120,12 @@ namespace RegisterLoginJWT.Services
                 user.RefreshToken = refreshToken;
                 user.RefreshTokenExpirationDate = DateTime.Now.AddDays(2);
             }
-            var accessToken = GenerateAccessToken(user);
+            var accessToken = GenerateAccessToken(user, roleNames);
 
             return new TokenDTO { Accesstoken = accessToken, RefreshToken = refreshToken };
         }
 
-        private string GenerateAccessToken(UserService user)
+        private string GenerateAccessToken(User user, List<string>? roleNames)
         {
             //claims
 
@@ -132,6 +135,8 @@ namespace RegisterLoginJWT.Services
                 new Claim(ClaimTypes.Name, user.UserName)
             };
 
+            if (claims != null)
+                claims.AddRange(roleNames.Select(roleName => new Claim(ClaimTypes.Role, roleName)));
             // Key SymmetricSecurityKey
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration.GetSection("JWTOptions:Secret").Value ?? string.Empty));
@@ -162,7 +167,7 @@ namespace RegisterLoginJWT.Services
             return handler.WriteToken(token);
         }
 
-        private string GenerateRefreshToken(UserService user)
+        private string GenerateRefreshToken(User user)
         {
             //claims
 

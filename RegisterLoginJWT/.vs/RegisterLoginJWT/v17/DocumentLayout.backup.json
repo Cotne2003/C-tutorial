@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\services\\roleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\interfaces\\iroleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,16 +26,29 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Program.cs",
               "RelativeDocumentMoniker": "RegisterLoginJWT\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Program.cs",
               "RelativeToolTip": "RegisterLoginJWT\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA4AAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-09T18:03:17.449Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "RegisterLoginJWT\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Controllers\\UserController.cs",
+              "RelativeToolTip": "RegisterLoginJWT\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowC0AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T16:45:11.984Z",
               "EditorCaption": ""
             },
             {
@@ -48,41 +57,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IRoleService.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Interfaces\\IRoleService.cs",
-              "RelativeDocumentMoniker": "RegisterLoginJWT\\Interfaces\\IRoleService.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Interfaces\\IRoleService.cs",
-              "RelativeToolTip": "RegisterLoginJWT\\Interfaces\\IRoleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T18:45:27.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RoleService.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\RoleService.cs",
-              "RelativeDocumentMoniker": "RegisterLoginJWT\\Services\\RoleService.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\RoleService.cs",
-              "RelativeToolTip": "RegisterLoginJWT\\Services\\RoleService.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAIwDQAAAAAAAAAAAAAAA==",
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "RegisterLoginJWT\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\UserService.cs",
+              "RelativeToolTip": "RegisterLoginJWT\\Services\\UserService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAwwFEAAAB9AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T18:28:39.651Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "RegisterLoginJWT\\Controllers\\RoleController.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "RegisterLoginJWT\\Controllers\\RoleController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwCQAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T18:26:15.493Z",
+              "WhenOpened": "2025-03-13T11:17:40.482Z",
               "EditorCaption": ""
             }
           ]
