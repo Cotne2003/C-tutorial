@@ -74,12 +74,14 @@ namespace RegisterLoginJWT.Services
 
         public async Task<ServiceResponse<UserDTO>> GetByIdAsync(int id)
         {
-            var user = await _context.users.FirstOrDefaultAsync(x => x.Id == id);
-
-            if (user is null)
-                return new ServiceResponse<UserDTO>() { Data = null, Success = false, Message = "User not found" };
-
-            return new ServiceResponse<UserDTO>() { Data = _mapper.Map<UserDTO>(user), Message = "User found successfully" };
+            try
+            {
+                throw new Exception();
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResponse<UserDTO>() { Success = false, Message = ex.Message };
+            }
         }
 
         public async Task<ServiceResponse<string>> UpdateAsync(UserUpdateDTO dto)
