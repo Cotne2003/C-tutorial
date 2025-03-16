@@ -290,3 +290,5 @@ C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\ob
 C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\bin\Debug\net8.0\AutoMapper.dll
 C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\obj\Debug\net8.0\RegisterLoginJWT.Resource.resources
+C:\Users\Tsotne\OneDrive\Desktop\C-tutorial\RegisterLoginJWT\RegisterLoginJWT\obj\Debug\net8.0\RegisterLoginJWT.csproj.GenerateResource.cache

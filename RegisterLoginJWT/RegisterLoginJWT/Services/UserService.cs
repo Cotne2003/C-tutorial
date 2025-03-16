@@ -1,5 +1,7 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
+using RegisterLoginJWT.Enums;
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
 using RegisterLoginJWT.Models.DTOS.User;
@@ -19,7 +21,6 @@ namespace RegisterLoginJWT.Services
             _context = context;
             _mapper = mapper;
         }
-
         public async Task<ServiceResponse<int>> CreateAsync(UserCreateDTO dto)
         {
             var response = new ServiceResponse<int>();
@@ -56,7 +57,8 @@ namespace RegisterLoginJWT.Services
             if (userToDelete is null)
                 return new ServiceResponse<bool> { Data = false, Success = false, Message = "User not found" };
 
-            _context.users.Remove(userToDelete);
+            userToDelete.Status = Status.Deleted;
+            _context.users.Update(userToDelete);
             await _context.SaveChangesAsync();
 
             return new ServiceResponse<bool> { Data = true, Message = "User deleted successfully" };
@@ -76,11 +78,13 @@ namespace RegisterLoginJWT.Services
         {
             try
             {
-                throw new Exception();
+                var user = await _context.users.Include(x => x.Roles).FirstOrDefaultAsync(x => x.Id == id);
+
+                return new ServiceResponse<UserDTO>() { Data = _mapper.Map<UserDTO>(user), Message = $"{user.UserName} returned successfully" };
             }
             catch (Exception ex)
             {
-                return new ServiceResponse<UserDTO>() { Success = false, Message = ex.Message };
+                return new ServiceResponse<UserDTO>() { Success = false, Message = ex.GetFullMessage() };
             }
         }
 

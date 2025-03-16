@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using RegisterLoginJWT.Enums;
 using RegisterLoginJWT.Interfaces;
 using RegisterLoginJWT.Models;
 using RegisterLoginJWT.Models.DTOS.Auth;
@@ -52,12 +53,17 @@ namespace RegisterLoginJWT.Services
 
             var user = await _context.users.Include(x => x.Roles).FirstOrDefaultAsync(x => x.UserName.ToLower() == dto.UserName.ToLower());
 
-            var roleNames = user.Roles.Select(x => x.Name).ToList();
+            if (user != null && user.Status != Status.Active)
+            {
+                response.Success = false;
+                response.Data = "User is not active please contact administrator";
+                return response;
+            }
 
             if (user is null)
             {
                 response.Success = false;
-                response.Message = "User not found";
+                response.Message = HelperService.GetResourceValue("UserNotFound");
                 return response;
             }
             else if (!VerifyPasswordHash(dto.Password, user.PasswordHash, user.PasswordSalt))
@@ -68,6 +74,7 @@ namespace RegisterLoginJWT.Services
             }
             else
             {
+                var roleNames = user.Roles.Select(x => x.Name).ToList();
                 var result = GenerateTokens(user, dto.StaySignedIn, roleNames);
                 response.Data = result.Accesstoken;
                 response.Success = true;
