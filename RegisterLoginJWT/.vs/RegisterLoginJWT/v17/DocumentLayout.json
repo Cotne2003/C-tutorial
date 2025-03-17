@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\filter\\filters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\filter\\filters.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\helperservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,17 +30,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Program.cs",
               "RelativeDocumentMoniker": "RegisterLoginJWT\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Program.cs",
               "RelativeToolTip": "RegisterLoginJWT\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-09T18:03:17.449Z",
               "IsPinned": true,
@@ -48,7 +52,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Filters.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Filter\\Filters.cs",
+              "RelativeDocumentMoniker": "RegisterLoginJWT\\Filter\\Filters.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Filter\\Filters.cs",
+              "RelativeToolTip": "RegisterLoginJWT\\Filter\\Filters.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T12:00:54.606Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "RegisterLoginJWT\\Services\\AuthService.cs",
@@ -56,12 +73,11 @@
               "RelativeToolTip": "RegisterLoginJWT\\Services\\AuthService.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAowEEAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T19:35:39.233Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T19:35:39.233Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "UserService.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "RegisterLoginJWT\\Services\\UserService.cs",
@@ -69,12 +85,11 @@
               "RelativeToolTip": "RegisterLoginJWT\\Services\\UserService.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAowA0AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T19:35:30.013Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T19:35:30.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "HelperService.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\HelperService.cs",
               "RelativeDocumentMoniker": "RegisterLoginJWT\\HelperService.cs",
@@ -82,8 +97,7 @@
               "RelativeToolTip": "RegisterLoginJWT\\HelperService.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAQwBEAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T19:35:00.104Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T19:35:00.104Z"
             }
           ]
         }
