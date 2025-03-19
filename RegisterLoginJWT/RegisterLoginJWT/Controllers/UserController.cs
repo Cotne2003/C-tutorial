@@ -19,6 +19,12 @@ namespace RegisterLoginJWT.Controllers
             _userService = userService;
         }
 
+        [HttpPost("Picture")]
+        public async Task<ActionResult> UploadPicture([FromForm] IFormFile file)
+        {
+            throw new Exception();
+        }
+
         [HttpGet]
         public async Task<ServiceResponse<List<UserDTO>>> GetAllAsync()
         {

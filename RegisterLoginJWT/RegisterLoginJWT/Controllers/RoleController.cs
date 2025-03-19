@@ -16,6 +16,12 @@ namespace RegisterLoginJWT.Controllers
             _roleService = roleService;
         }
 
+        [HttpPost("Test")]
+        public int Test(int int1, int int2)
+        {
+            return int1 / int2;
+        }
+
         [HttpGet]
         public async Task<ServiceResponse<List<RoleDTO>>> GetAllASync()
         {

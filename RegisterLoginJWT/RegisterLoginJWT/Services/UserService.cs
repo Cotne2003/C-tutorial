@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RegisterLoginJWT.Enums;
 using RegisterLoginJWT.Interfaces;
@@ -21,6 +22,7 @@ namespace RegisterLoginJWT.Services
             _context = context;
             _mapper = mapper;
         }
+
         public async Task<ServiceResponse<int>> CreateAsync(UserCreateDTO dto)
         {
             var response = new ServiceResponse<int>();

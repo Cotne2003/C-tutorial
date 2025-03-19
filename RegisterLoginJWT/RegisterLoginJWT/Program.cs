@@ -21,7 +21,7 @@ namespace RegisterLoginJWT
 
             builder.Services.AddControllers(x =>
             {
-                x.Filters.Add<Filters>();
+                x.Filters.Add<GlobalExceptionHandler>();
             });
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
