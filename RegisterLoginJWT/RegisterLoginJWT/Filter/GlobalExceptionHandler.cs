@@ -14,7 +14,7 @@ namespace RegisterLoginJWT.Filter
             {
                 StatusCode = (int)HttpStatusCode.InternalServerError,
                 Message = "An unexpected error occurred. Please try again later.",
-                Details = context.Exception.Message
+                Details = context.Exception.GetFullMessage()
             };
 
             context.Result = new ObjectResult(response)
