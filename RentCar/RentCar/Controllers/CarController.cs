@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using RentCar.Interfaces;
 using RentCar.Models;
 using RentCar.Models.DTO_s.Car;
@@ -27,6 +29,12 @@ namespace RentCar.Controllers
         public async Task<ServiceResponse<int>> CreateAsync(CarCreateDTO dto)
         {
             return await _carService.CreateAsync(dto);
+        }
+
+        [HttpGet("paginated")]
+        public async Task<ServiceResponse<List<CarDTO>>> GetAllPaginatedAsync(int pageNumber, int pageSize)
+        {
+            return await _carService.GetAllPaginatedAsync(pageNumber, pageSize);
         }
     }
 }

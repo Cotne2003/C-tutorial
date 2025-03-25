@@ -6,6 +6,7 @@ namespace RentCar.Interfaces
     public interface ICarService
     {
         Task<ServiceResponse<List<CarDTO>>> GetAllAsync();
+        Task<ServiceResponse<List<CarDTO>>> GetAllPaginatedAsync(int pageNumber, int pageSize);
         Task<ServiceResponse<int>> CreateAsync(CarCreateDTO dto);
         Task<ServiceResponse<List<CarDTO>>> GetByPhoneAsync(int number);
         Task<ServiceResponse<List<string>>> GetAllCitiesAsync();

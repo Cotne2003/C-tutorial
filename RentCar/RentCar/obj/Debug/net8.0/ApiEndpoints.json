@@ -44,5 +44,36 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "RentCar.Controllers.CarController",
+    "Method": "GetAllPaginatedAsync",
+    "RelativePath": "api/Car/paginated",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pageNumber",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "pageSize",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "RentCar.Models.ServiceResponse\u00601[[System.Collections.Generic.List\u00601[[RentCar.Models.DTO_s.Car.CarDTO, RentCar, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
