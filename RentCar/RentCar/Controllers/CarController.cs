@@ -36,5 +36,17 @@ namespace RentCar.Controllers
         {
             return await _carService.GetAllPaginatedAsync(pageNumber, pageSize);
         }
+
+        [HttpGet("filter")]
+        public async Task<ServiceResponse<List<CarDTO>>> GetAllFilteredCars(int? capacity, int? startYear, int? endYear, string? city, int pageIndex, int pageSize)
+        {
+            return await _carService.GetAllFilteredAsync(capacity, startYear, endYear, city, pageIndex, pageSize);
+        }
+
+        [HttpGet("byPhone")]
+        public async Task<ServiceResponse<List<CarDTO>>> GetAllByPhoneAsync(string phoneNumber)
+        {
+            return await _carService.GetAllByPhoneAsync(phoneNumber);
+        }
     }
 }

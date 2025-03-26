@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 using RentCar.Interfaces;
 using RentCar.Models;
@@ -48,7 +50,7 @@ namespace RentCar.Services
                 return new ServiceResponse<int>
                 {
                     Message = ex.GetFullMessage(),
-                    StatusCode = HttpStatusCode.BadRequest
+                    StatusCode = HttpStatusCode.InternalServerError
                 };
             }
         }
@@ -57,7 +59,7 @@ namespace RentCar.Services
         {
             try
             {
-                List<CarDTO> cars = await _context.cars.Select(x => _mapper.Map<CarDTO>(x)).ToListAsync();
+                List<CarDTO> cars = await _context.cars.ProjectTo<CarDTO>(_mapper.ConfigurationProvider).ToListAsync();
                 return new ServiceResponse<List<CarDTO>> { Data = cars, Message = "Cars returned successfully", StatusCode = HttpStatusCode.OK };
 
             }
@@ -66,7 +68,28 @@ namespace RentCar.Services
                 return new ServiceResponse<List<CarDTO>>
                 {
                     Message = ex.GetFullMessage(),
-                    StatusCode = HttpStatusCode.BadRequest
+                    StatusCode = HttpStatusCode.InternalServerError
+                };
+            }
+        }
+
+        public async Task<ServiceResponse<List<CarDTO>>> GetAllByPhoneAsync(string phoneNumber)
+        {
+            try
+            {
+                List<CarDTO> cars = await _context.cars.Where(x => x.OwnerPhoneNumber == phoneNumber).Select(x => _mapper.Map<CarDTO>(x)).ToListAsync();
+
+                if (cars.Count == 0)
+                    return new ServiceResponse<List<CarDTO>> { Message = "No cars found for this phone number.", StatusCode = HttpStatusCode.OK };
+
+                return new ServiceResponse<List<CarDTO>> {Data = cars, Message = "Cars returned successfully", StatusCode = HttpStatusCode.OK };
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResponse<List<CarDTO>>
+                {
+                    Message = ex.GetFullMessage(),
+                    StatusCode = HttpStatusCode.InternalServerError
                 };
             }
         }
@@ -76,26 +99,88 @@ namespace RentCar.Services
             throw new NotImplementedException();
         }
 
+        public async Task<ServiceResponse<List<CarDTO>>> GetAllFilteredAsync(int? capacity, int? startYear, int? endYear, string? city, int pageIndex, int pageSize)
+        {
+            try
+            {
+
+                if (startYear.HasValue && endYear.HasValue && endYear < startYear)
+                {
+                    return new ServiceResponse<List<CarDTO>>
+                    {
+                        Message = "Start year must be less than or equal to end year",
+                        StatusCode = HttpStatusCode.BadRequest
+                    };
+                }
+
+                var query = _context.cars.AsQueryable();
+
+                if (capacity.HasValue && capacity > 0)
+                    query = query.Where(x => x.Capacity == capacity);
+
+                if (startYear.HasValue)
+                    query = query.Where(x => x.Year >= startYear);
+
+                if (endYear.HasValue)
+                    query = query.Where(x => x.Year <= endYear);
+
+                if (!string.IsNullOrEmpty(city))
+                    query = query.Where(x => x.City.ToLower() == city.ToLower());
+
+                int totalCars = await query.CountAsync();
+
+                List<CarDTO> cars = await query
+                    .OrderBy(x => x.Id)
+                    .Skip((pageIndex - 1) * pageSize)
+                    .Take(pageSize)
+                    .ProjectTo<CarDTO>(_mapper.ConfigurationProvider)
+                    .ToListAsync();
+
+                return new ServiceResponse<List<CarDTO>>
+                {
+                    Data = cars,
+                    Message = cars.Count > 0 ? "Filtered cars returned successfully" : "No cars found for the given filters",
+                    StatusCode = HttpStatusCode.OK,
+                };
+            }
+            catch (Exception ex)
+            {
+                return new ServiceResponse<List<CarDTO>>
+                {
+                    Message = ex.GetFullMessage(),
+                    StatusCode = HttpStatusCode.InternalServerError
+                };
+            }
+        }
+
         public async Task<ServiceResponse<List<CarDTO>>> GetAllPaginatedAsync(int pageNumber, int pageSize)
         {
             try
             {
                 int totalCars = await _context.cars.CountAsync();
 
-                List<CarDTO> carsQuery = await _context.cars.Select(x => _mapper.Map<CarDTO>(x)).ToListAsync();
+                List<CarDTO> cars = await _context.cars
+                    .OrderBy(x => x.Id)
+                    .Skip((pageNumber -1) * pageSize)
+                    .Take(pageSize)
+                    .ProjectTo<CarDTO>(_mapper.ConfigurationProvider)
+                    .ToListAsync();
 
-                List<CarDTO> cars = carsQuery.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
-
-                if (cars.Count == 0)
-                    return new ServiceResponse<List<CarDTO>> { Message = "Page is empty", StatusCode = HttpStatusCode.ExpectationFailed };
-
-
-                return new ServiceResponse<List<CarDTO>> { Data = cars, Message = "Paginated cars returned successfully", StatusCode = HttpStatusCode.OK };
+                return new ServiceResponse<List<CarDTO>>
+                {
+                    Data = cars,
+                    Message = cars.Count > 0 ? "Paginated cars returned successfully" : "No cars found on this page",
+                    StatusCode = HttpStatusCode.OK
+                };
 
             }
             catch (Exception ex)
             {
-                return new ServiceResponse<List<CarDTO>> { Message = ex.GetFullMessage(), StatusCode = HttpStatusCode.BadRequest };
+                return new ServiceResponse<List<CarDTO>>
+                {
+                    Message = ex.GetFullMessage(),
+                    StatusCode = HttpStatusCode.InternalServerError
+                };
             }
         }
 
