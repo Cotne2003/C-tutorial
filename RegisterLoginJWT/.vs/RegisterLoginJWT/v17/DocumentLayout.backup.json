@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\interfaces\\iemailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|c:\\users\\tsotne\\onedrive\\desktop\\c-tutorial\\registerloginjwt\\registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9D6E8119-6E91-45EE-B9BC-FDF501AEA4E3}|RegisterLoginJWT\\RegisterLoginJWT.csproj|solutionrelative:registerloginjwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,17 +22,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Program.cs",
               "RelativeDocumentMoniker": "RegisterLoginJWT\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Program.cs",
               "RelativeToolTip": "RegisterLoginJWT\\Program.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAgwEsAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEsAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T16:26:50.343Z",
               "IsPinned": true,
@@ -37,14 +41,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Models\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "RegisterLoginJWT\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Models\\ApplicationDbContext.cs",
-              "RelativeToolTip": "RegisterLoginJWT\\Models\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAuAAAAAAAAAA==",
+              "Title": "IEmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Interfaces\\IEmailSender.cs",
+              "RelativeDocumentMoniker": "RegisterLoginJWT\\Interfaces\\IEmailSender.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Interfaces\\IEmailSender.cs",
+              "RelativeToolTip": "RegisterLoginJWT\\Interfaces\\IEmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T11:37:27.502Z",
+              "WhenOpened": "2025-03-25T13:14:24.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "RegisterLoginJWT\\Services\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\C-tutorial\\RegisterLoginJWT\\RegisterLoginJWT\\Services\\EmailSender.cs",
+              "RelativeToolTip": "RegisterLoginJWT\\Services\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:42:20.044Z",
               "EditorCaption": ""
             },
             {
