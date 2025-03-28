@@ -10,7 +10,6 @@ namespace RentCar.Interfaces
         Task<ServiceResponse<List<CarDTO>>> GetAllFilteredAsync(int? capacity, int? startYear, int? endYear, string? city, int pageIndex, int pageSize);
         Task<ServiceResponse<List<CarDTO>>> GetAllByPhoneAsync(string phoneNumber);
         Task<ServiceResponse<int>> CreateAsync(CarCreateDTO dto);
-        Task<ServiceResponse<List<CarDTO>>> GetByPhoneAsync(int number);
         Task<ServiceResponse<List<string>>> GetAllCitiesAsync();
         Task<ServiceResponse<CarDTO>> GetByIdAsync(int id);
     }

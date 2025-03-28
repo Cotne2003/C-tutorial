@@ -8,5 +8,8 @@ namespace RentCar.Models
         public ApplicationDbContext(DbContextOptions options) : base(options) { }
 
         public DbSet<Car> cars { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<Message> messages { get; set; }
+        public DbSet<FavoriteCar> favoriteCars { get; set; }
     }
 }

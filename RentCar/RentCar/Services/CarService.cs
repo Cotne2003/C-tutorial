@@ -23,175 +23,129 @@ namespace RentCar.Services
 
         public async Task<ServiceResponse<int>> CreateAsync(CarCreateDTO dto)
         {
-            try
-            {
-                if (dto == null)
-                {
-                    return new ServiceResponse<int>
-                    {
-                        Message = "Invalid car data",
-                        StatusCode = HttpStatusCode.BadRequest
-                    };
-                }
-
-                Car mappedCar = _mapper.Map<Car>(dto);
-
-                await _context.cars.AddAsync(mappedCar);
-                await _context.SaveChangesAsync();
-
-                return new ServiceResponse<int>
-                {
-                    Data = mappedCar.Id, Message = "Car added successfully",
-                    StatusCode = HttpStatusCode.Created
-                };
-            }
-            catch (Exception ex)
+            if (dto == null)
             {
                 return new ServiceResponse<int>
                 {
-                    Message = ex.GetFullMessage(),
-                    StatusCode = HttpStatusCode.InternalServerError
+                    Message = "Invalid car data",
+                    StatusCode = HttpStatusCode.BadRequest
                 };
             }
+
+            Car mappedCar = _mapper.Map<Car>(dto);
+
+            await _context.cars.AddAsync(mappedCar);
+            await _context.SaveChangesAsync();
+
+            return new ServiceResponse<int>
+            {
+                Data = mappedCar.Id, Message = "Car added successfully",
+                StatusCode = HttpStatusCode.Created
+            };
         }
 
         public async Task<ServiceResponse<List<CarDTO>>> GetAllAsync()
         {
-            try
-            {
-                List<CarDTO> cars = await _context.cars.ProjectTo<CarDTO>(_mapper.ConfigurationProvider).ToListAsync();
-                return new ServiceResponse<List<CarDTO>> { Data = cars, Message = "Cars returned successfully", StatusCode = HttpStatusCode.OK };
-
-            }
-            catch (Exception ex)
-            {
-                return new ServiceResponse<List<CarDTO>>
-                {
-                    Message = ex.GetFullMessage(),
-                    StatusCode = HttpStatusCode.InternalServerError
-                };
-            }
+            List<CarDTO> cars = await _context.cars.ProjectTo<CarDTO>(_mapper.ConfigurationProvider).ToListAsync();
+            return new ServiceResponse<List<CarDTO>> { Data = cars, Message = "Cars returned successfully", StatusCode = HttpStatusCode.OK };
         }
 
         public async Task<ServiceResponse<List<CarDTO>>> GetAllByPhoneAsync(string phoneNumber)
         {
-            try
-            {
-                List<CarDTO> cars = await _context.cars.Where(x => x.OwnerPhoneNumber == phoneNumber).Select(x => _mapper.Map<CarDTO>(x)).ToListAsync();
+            List<CarDTO> cars = await _context.cars.Where(x => x.OwnerPhoneNumber == phoneNumber).Select(x => _mapper.Map<CarDTO>(x)).ToListAsync();
 
-                if (cars.Count == 0)
-                    return new ServiceResponse<List<CarDTO>> { Message = "No cars found for this phone number.", StatusCode = HttpStatusCode.OK };
+            if (cars.Count == 0)
+                return new ServiceResponse<List<CarDTO>> { Message = "No cars found for this phone number.", StatusCode = HttpStatusCode.OK };
 
-                return new ServiceResponse<List<CarDTO>> {Data = cars, Message = "Cars returned successfully", StatusCode = HttpStatusCode.OK };
-            }
-            catch (Exception ex)
-            {
-                return new ServiceResponse<List<CarDTO>>
-                {
-                    Message = ex.GetFullMessage(),
-                    StatusCode = HttpStatusCode.InternalServerError
-                };
-            }
+            return new ServiceResponse<List<CarDTO>> { Data = cars, Message = "Cars returned successfully", StatusCode = HttpStatusCode.OK };
         }
 
-        public Task<ServiceResponse<List<string>>> GetAllCitiesAsync()
+        public async Task<ServiceResponse<List<string>>> GetAllCitiesAsync()
         {
-            throw new NotImplementedException();
+            List<string> cities = await _context.cars.Select(x => x.City).ToListAsync();
+            return new ServiceResponse<List<string>>
+            {
+                Data = cities,
+                Message = "Cities returned successfully",
+                StatusCode = HttpStatusCode.OK
+            };
         }
 
         public async Task<ServiceResponse<List<CarDTO>>> GetAllFilteredAsync(int? capacity, int? startYear, int? endYear, string? city, int pageIndex, int pageSize)
         {
-            try
-            {
-
-                if (startYear.HasValue && endYear.HasValue && endYear < startYear)
-                {
-                    return new ServiceResponse<List<CarDTO>>
-                    {
-                        Message = "Start year must be less than or equal to end year",
-                        StatusCode = HttpStatusCode.BadRequest
-                    };
-                }
-
-                var query = _context.cars.AsQueryable();
-
-                if (capacity.HasValue && capacity > 0)
-                    query = query.Where(x => x.Capacity == capacity);
-
-                if (startYear.HasValue)
-                    query = query.Where(x => x.Year >= startYear);
-
-                if (endYear.HasValue)
-                    query = query.Where(x => x.Year <= endYear);
-
-                if (!string.IsNullOrEmpty(city))
-                    query = query.Where(x => x.City.ToLower() == city.ToLower());
-
-                int totalCars = await query.CountAsync();
-
-                List<CarDTO> cars = await query
-                    .OrderBy(x => x.Id)
-                    .Skip((pageIndex - 1) * pageSize)
-                    .Take(pageSize)
-                    .ProjectTo<CarDTO>(_mapper.ConfigurationProvider)
-                    .ToListAsync();
-
-                return new ServiceResponse<List<CarDTO>>
-                {
-                    Data = cars,
-                    Message = cars.Count > 0 ? "Filtered cars returned successfully" : "No cars found for the given filters",
-                    StatusCode = HttpStatusCode.OK,
-                };
-            }
-            catch (Exception ex)
+            if (startYear.HasValue && endYear.HasValue && endYear < startYear)
             {
                 return new ServiceResponse<List<CarDTO>>
                 {
-                    Message = ex.GetFullMessage(),
-                    StatusCode = HttpStatusCode.InternalServerError
+                    Message = "Start year must be less than or equal to end year",
+                    StatusCode = HttpStatusCode.BadRequest
                 };
             }
+
+            var query = _context.cars.AsQueryable();
+
+            if (capacity.HasValue && capacity > 0)
+                query = query.Where(x => x.Capacity == capacity);
+
+            if (startYear.HasValue)
+                query = query.Where(x => x.Year >= startYear);
+
+            if (endYear.HasValue)
+                query = query.Where(x => x.Year <= endYear);
+
+            if (!string.IsNullOrEmpty(city))
+                query = query.Where(x => x.City.ToLower() == city.ToLower());
+
+            int totalCars = await query.CountAsync();
+
+            List<CarDTO> cars = await query
+                .OrderBy(x => x.Id)
+                .Skip((pageIndex - 1) * pageSize)
+                .Take(pageSize)
+                .ProjectTo<CarDTO>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+
+            return new ServiceResponse<List<CarDTO>>
+            {
+                Data = cars,
+                Message = cars.Count > 0 ? "Filtered cars returned successfully" : "No cars found for the given filters",
+                StatusCode = HttpStatusCode.OK,
+            };
         }
 
         public async Task<ServiceResponse<List<CarDTO>>> GetAllPaginatedAsync(int pageNumber, int pageSize)
         {
-            try
+            int totalCars = await _context.cars.CountAsync();
+
+            List<CarDTO> cars = await _context.cars
+                .OrderBy(x => x.Id)
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .ProjectTo<CarDTO>(_mapper.ConfigurationProvider)
+                .ToListAsync();
+
+            return new ServiceResponse<List<CarDTO>>
             {
-                int totalCars = await _context.cars.CountAsync();
-
-                List<CarDTO> cars = await _context.cars
-                    .OrderBy(x => x.Id)
-                    .Skip((pageNumber -1) * pageSize)
-                    .Take(pageSize)
-                    .ProjectTo<CarDTO>(_mapper.ConfigurationProvider)
-                    .ToListAsync();
-
-                return new ServiceResponse<List<CarDTO>>
-                {
-                    Data = cars,
-                    Message = cars.Count > 0 ? "Paginated cars returned successfully" : "No cars found on this page",
-                    StatusCode = HttpStatusCode.OK
-                };
-
-            }
-            catch (Exception ex)
-            {
-                return new ServiceResponse<List<CarDTO>>
-                {
-                    Message = ex.GetFullMessage(),
-                    StatusCode = HttpStatusCode.InternalServerError
-                };
-            }
+                Data = cars,
+                Message = cars.Count > 0 ? "Paginated cars returned successfully" : "No cars found on this page",
+                StatusCode = HttpStatusCode.OK
+            };
         }
 
-        public Task<ServiceResponse<CarDTO>> GetByIdAsync(int id)
+        public async Task<ServiceResponse<CarDTO>> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
-        }
+            Car contextCar = await _context.cars.FirstOrDefaultAsync(x => x.Id == id);
+            if (contextCar is null)
+                throw new NullReferenceException();
 
-        public Task<ServiceResponse<List<CarDTO>>> GetByPhoneAsync(int number)
-        {
-            throw new NotImplementedException();
+            CarDTO car = _mapper.Map<CarDTO>(contextCar);
+
+            return new ServiceResponse<CarDTO>
+            {
+                Data = car,
+                Message = "Car returned successfully",
+                StatusCode = HttpStatusCode.OK
+            };
         }
     }
 }

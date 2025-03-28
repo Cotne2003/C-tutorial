@@ -48,5 +48,16 @@ namespace RentCar.Controllers
         {
             return await _carService.GetAllByPhoneAsync(phoneNumber);
         }
+        [HttpGet("cities")]
+        public async Task<ServiceResponse<List<string>>> GetAllCitiesAsync()
+        {
+            return await _carService.GetAllCitiesAsync();
+        }
+
+        [HttpGet("{id}")]
+        public async Task<ServiceResponse<CarDTO>> GetByIdAsync(int id)
+        {
+            return await _carService.GetByIdAsync(id);
+        }
     }
 }

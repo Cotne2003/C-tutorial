@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\services\\carservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\interfaces\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\interfaces\\icarservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\models\\baseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\models\\baseclass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\models\\dto\u0027s\\user\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|solutionrelative:rentcar\\models\\dto\u0027s\\user\\userlogindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C8203BD1-ADC9-4EB3-86FC-D5E746415172}|RentCar\\RentCar.csproj|c:\\users\\tsotne\\onedrive\\desktop\\rentcar\\rentcar\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,20 +18,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 191,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Program.cs",
               "RelativeDocumentMoniker": "RentCar\\Program.cs",
               "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Program.cs",
               "RelativeToolTip": "RentCar\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAkAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAgwDEAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-20T13:31:09.108Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Bookmark",
@@ -51,54 +40,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseClass.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\BaseClass.cs",
-              "RelativeDocumentMoniker": "RentCar\\Models\\BaseClass.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\BaseClass.cs",
-              "RelativeToolTip": "RentCar\\Models\\BaseClass.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T19:30:33.546Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CarController.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Controllers\\CarController.cs",
-              "RelativeDocumentMoniker": "RentCar\\Controllers\\CarController.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Controllers\\CarController.cs",
-              "RelativeToolTip": "RentCar\\Controllers\\CarController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T19:24:20.464Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ICarService.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Interfaces\\ICarService.cs",
-              "RelativeDocumentMoniker": "RentCar\\Interfaces\\ICarService.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Interfaces\\ICarService.cs",
-              "RelativeToolTip": "RentCar\\Interfaces\\ICarService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAoAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T18:12:13.339Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CarService.cs",
-              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\CarService.cs",
-              "RelativeDocumentMoniker": "RentCar\\Services\\CarService.cs",
-              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Services\\CarService.cs",
-              "RelativeToolTip": "RentCar\\Services\\CarService.cs",
-              "ViewState": "AgIAAJEAAAAAAAAAAAAmwKUAAABFAAAAAAAAAA==",
+              "Title": "UserLoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\DTO\u0027s\\User\\UserLoginDTO.cs",
+              "RelativeDocumentMoniker": "RentCar\\Models\\DTO\u0027s\\User\\UserLoginDTO.cs",
+              "ToolTip": "C:\\Users\\Tsotne\\OneDrive\\Desktop\\RentCar\\RentCar\\Models\\DTO\u0027s\\User\\UserLoginDTO.cs",
+              "RelativeToolTip": "RentCar\\Models\\DTO\u0027s\\User\\UserLoginDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T11:43:04.175Z",
+              "WhenOpened": "2025-03-28T12:16:01.048Z",
               "EditorCaption": ""
             }
           ]

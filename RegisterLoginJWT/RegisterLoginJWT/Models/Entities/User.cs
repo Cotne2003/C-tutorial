@@ -1,4 +1,5 @@
 ﻿using RegisterLoginJWT.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace RegisterLoginJWT.Models.Entities
 {

@@ -78,7 +78,6 @@ namespace RegisterLoginJWT.Services
                 var result = GenerateTokens(user, dto.StaySignedIn, roleNames);
                 response.Data = result.Accesstoken;
                 response.Success = true;
-
             }
 
             if (dto.StaySignedIn)
